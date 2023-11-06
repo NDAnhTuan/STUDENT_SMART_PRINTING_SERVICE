@@ -16,3 +16,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+header {
+    position: relative;
+}
+
+.container {
+    margin-left: 360px;
+}
