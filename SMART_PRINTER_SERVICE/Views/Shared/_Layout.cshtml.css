@@ -24,12 +24,13 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .navbar ul > li {
-    border: 1px solid #000000 !important;
+    
 }
     .navbar ul > li:hover {
         background-color: #ede9f1;
+        border: 1px solid #000000 !important;
         border-radius: 10px; /* Bo tròn góc của mục khi di chuột */
-        //transition: background-color 0.3s; /* Tạo hiệu ứng màu nền mượt mà */
+        transition: background-color 0.3s; /* Tạo hiệu ứng màu nền mượt mà */
     }
 
 .container-fluid div {

@@ -18,7 +18,24 @@ namespace SMART_PRINTER_SERVICE.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Print()
+        {
+            return View();
+        }
+        public IActionResult RechargeMoney()
+        {
+            return View();
+        }
+
+        public IActionResult BuyPrintingMoney()
+        {
+            return View();
+        }
+        public IActionResult OrderStatus()
+        {
+            return View();
+        }
+        public IActionResult History()
         {
             return View();
         }
