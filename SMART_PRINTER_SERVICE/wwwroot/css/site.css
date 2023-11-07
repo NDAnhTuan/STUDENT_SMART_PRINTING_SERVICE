@@ -22,6 +22,8 @@ header {
 }
 
 .container {
-    margin-left: 360px;
-    margin-top: 110px;
+    width: 1120px;
+    position: absolute;
+    left: 360px;
+    top: 110px;
 }
