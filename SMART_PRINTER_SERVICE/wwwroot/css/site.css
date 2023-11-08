@@ -24,7 +24,7 @@ header {
     position: relative;
 }
 
-.container {
+.container-home {
     /*width: 1120px;*/
     width: calc(100% - 360px);
     position: absolute;
