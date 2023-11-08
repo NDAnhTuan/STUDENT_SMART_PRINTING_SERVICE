@@ -17,16 +17,18 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
 }
 
 header {
     position: relative;
 }
 
-/*.container {
-    width: 1120px;
-    position: absolute;*/
-    /*left: 360px;*/
-    /*top: 110px;
-}*/
+.container {
+    /*width: 1120px;*/
+    width: calc(100% - 360px);
+    position: absolute;
+    left: 360px;
+    padding: 0;
+    /*top: 110px;*/
+}
