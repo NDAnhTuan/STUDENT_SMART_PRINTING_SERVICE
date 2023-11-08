@@ -1,3 +1,6 @@
+:root {
+    --bg-color: rgba(247,242,250,255);
+}
 html {
   font-size: 14px;
 }
@@ -21,9 +24,9 @@ header {
     position: relative;
 }
 
-.container {
+/*.container {
     width: 1120px;
-    position: absolute;
-    left: 360px;
-    top: 110px;
-}
+    position: absolute;*/
+    /*left: 360px;*/
+    /*top: 110px;
+}*/

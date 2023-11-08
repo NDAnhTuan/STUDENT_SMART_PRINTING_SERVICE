@@ -1,23 +1,32 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+.mt-header{
+    margin-top:150px;
+}
+.contain-nav{
+    position: relative;
+}
+.bg-color {
+    background-color: var(--bg-color) !important;
+}
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-
+    right: 0;
     display: flex;
     flex-direction: column;
-
     height: 100%;
-    width: 360px;
+    width:100%;
 
     padding-top: 55px;
-    background-color: rgba(247,242,250,255)!important;
+    
 }
 
-.navbar .container-fluid, .navbar .navbar-nav {
+ .container-fluid{
     display: flex;
     flex-direction: column;
 }
@@ -56,12 +65,10 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .title-header {
     height: 110px;
-    width: 1150px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-left: 360px;
+  /* position: fixed;
+   top : 0;
+   right:0;
+   left:0;*/
     background-color: rosybrown;
 }
 
