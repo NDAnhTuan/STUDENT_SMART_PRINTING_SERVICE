@@ -54,6 +54,7 @@ for details on configuring this project to bundle and minify static web assets. 
     left: 360px;
     right: 0;
     /*margin-left: 360px;*/
+    z-index: 1;
     background-color: rosybrown;
 }
 .title-header .title-header-content {
@@ -67,6 +68,7 @@ main {
     position: absolute;
     top: 110px;
     width: 100%;
+    height: 1000px;
 }
 
 .container-fluid div {
