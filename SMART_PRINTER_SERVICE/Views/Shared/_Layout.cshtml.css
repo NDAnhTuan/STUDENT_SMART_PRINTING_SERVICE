@@ -12,6 +12,7 @@ for details on configuring this project to bundle and minify static web assets. 
     padding-top: 55px;
     background-color: rgba(247,242,250,255) !important;
     z-index: 1;
+    user-select: none;
 }
 
 .navbar .container-fluid, .navbar .navbar-nav {
@@ -30,7 +31,6 @@ for details on configuring this project to bundle and minify static web assets. 
     color: #000; /* Màu của chấm tròn */
     font-size: 36px;
     display: inline; /* Hiển thị chấm tròn trên cùng một dòng */
-    width: 50px; /* Độ rộng của chấm tròn (tùy chỉnh theo ý muốn) */
     position: absolute; /* Đặt vị trí tuyệt đối cho chấm tròn */
     left: -20px; /* Điều này giữ cho chấm tròn cách thẻ <a> 20px */
     margin-top: -9px;
@@ -57,24 +57,58 @@ for details on configuring this project to bundle and minify static web assets. 
     /*margin-left: 360px;*/
     z-index: 1;
     background-color: rosybrown;
+    user-select: none;
 }
 .title-header .title-header-intro {
     height: 100%;
     display: flex;
 }
 .title-header .title-header-intro .title-header-intro-content {
-
     display: inline-block;
     font-size: 24px;
     text-align: center;
     line-height: 110px;
     z-index: 2;
+    padding-left: 16px;
 }
 
 .title-header .title-header-intro .title-header-intro-logo {
     height: 100%;
     display: inline-block;
-    
+}
+
+.title-header-logout {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-header-logout-container {
+    display: flex;
+    padding: 8px;
+}
+
+.title-header-logout-container:hover {
+    border: 1px solid #000000;
+    border-radius: 10px; /* Bo tròn góc của mục khi di chuột */
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.title-header-logout-container .title-header-logout-text {
+    display: flex;
+    font-size: 24px;
+    padding-right: 8px;
+    font-weight: bold;
+}
+
+.title-header-logout-container .title-header-logout-icon {
+    font-size: 40px;
 }
 
 main {
