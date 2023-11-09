@@ -1,23 +1,31 @@
 ﻿﻿ /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-.navbar {
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360px;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 360px;
     padding-top: 55px;
-    background-color: rgba(247,242,250,255) !important;
+    background-color: rgba(247,242,250,255);
     z-index: 1;
     user-select: none;
+}
+.navbar {
+    background-color: rgba(247,242,250,255) !important;
 }
 
 .navbar .container-fluid, .navbar .navbar-nav {
     display: flex;
     flex-direction: column;
+    background-color: rgba(247,242,250,255) !important;
+}
+
+.container-fluid {
+    background-color: rgba(247,242,250,255) !important;
 }
 
 .navbar .navbar-nav .nav-item {
@@ -47,6 +55,12 @@ for details on configuring this project to bundle and minify static web assets. 
     transition: background-color 0.3s; /* Tạo hiệu ứng màu nền mượt mà */
 }
 
+.footer-nav {
+    padding: 0 12px;
+    background-color: #e6e0e9;
+    border-radius: 20px;
+}
+
 .title-header {
     height: 110px;
     display: inherit;
@@ -55,8 +69,10 @@ for details on configuring this project to bundle and minify static web assets. 
     left: 360px;
     right: 0;
     /*margin-left: 360px;*/
+    padding: 8px;
     z-index: 1;
-    background-color: rosybrown;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #d0bcff;
     user-select: none;
 }
 .title-header .title-header-intro {
@@ -111,6 +127,7 @@ for details on configuring this project to bundle and minify static web assets. 
     font-size: 40px;
 }
 
+
 main {
     display: inherit;
     position: absolute;
@@ -121,6 +138,7 @@ main {
 .container-fluid div {
     width: 100%;
 }
+
 
 a.navbar-brand {
     white-space: normal;
@@ -148,24 +166,10 @@ a {
     border-top: 1px solid #e5e5e5;
 }
 
-.border-bottom {
+.border-bottom.border-bottom {
     border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-    font-size: 1rem;
-    line-height: inherit;
-}
-
-.footer {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px;
 }
