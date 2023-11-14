@@ -2,11 +2,102 @@
 @{
     ViewData["Title"] = "View";
 }
-
-<h1>this is print preview</h1>
+<div class="get-home-screen">
+    <p>Print</p>
+</div>
 <div class=" container-content">
-    <div class="row gx-0">
-        <div class="col  border border-1 ">col</div>
-        <div class="col border border-1">col</div>
+   
+    <div class="container-text-content">
+        <p class="allow-type">Choose a file to upload: (Accept type: PDF, Word, JPG/JPEG, TIFF, AI)</p>
+        <div class="document-name">
+            <p>
+                CSS for idiots.pdf
+            </p>
+        </div>
+    </div>
+    <div class="row gx-0 two-box">
+
+        <div class="col  preview-window"></div>
+        <div class="col property-window">
+            <h2 class="printer">Printer</h2>
+            <div class="btn-group " role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    Chooose a printer
+                </button>
+                <ul class="dropdown-menu choose-btn" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item" href="#">Floor 5 H2</a></li>
+                    <li><a class="dropdown-item" href="#">Canteen H3</a></li>
+                    <li><a class="dropdown-item" href="#">WC H6</a></li>
+                    <li><a class="dropdown-item" href="#">Parking lot</a></li>
+                </ul>
+            </div>
+            <form>
+                <label class="printed-pages" for="Ppages">Printed pages</label><br>
+                <input type="text" class="default-in-input" name="Ppages" placeholder="Write in format x-y, if empty then print all pages"><br>
+             </form>
+             <div class="btn-group " role="group">
+                <button id="btnGroupDrop2" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    Paper
+                </button>
+                <ul class="dropdown-menu choose-btn" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item" href="#">A4</a></li>
+                    <li><a class="dropdown-item" href="#">A3</a></li>
+                    <li><a class="dropdown-item" href="#">Letter</a></li>
+                    <li><a class="dropdown-item" href="#">Legal</a></li>
+                </ul>
+            </div>
+            <br />
+            <div class="btn-group " role="group">
+                <button id="btnGroupDrop3" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    Color
+                </button>
+                <ul class="dropdown-menu choose-btn" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item" href="#">Black/White</a></li>
+                    <li><a class="dropdown-item" href="#">Color</a></li>
+                    <li><a class="dropdown-item" href="#">Grayscale</a></li>
+                    <li><a class="dropdown-item" href="#">Spot color</a></li>
+                </ul>
+            </div>
+            <br />
+            <div class="btn-group " role="group">
+                <button id="btnGroupDrop4" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                   Format
+                </button>
+                <ul class="dropdown-menu choose-btn" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item" href="#">Double sided</a></li>
+                    <li><a class="dropdown-item" href="#">Single sides</a></li>
+                 
+                </ul>
+            </div>
+             <form>
+                <label class="printed-pages" for="num-of-cops">Number of copies</label><br>
+                <input type="text" id="" class="default-in-input" name="Ppages" placeholder="Enter number, 1 for default"><br>
+             </form>
+            <div class="row gx-0 btn-bottom-group">
+                 <div class="col">
+                    <a href="#">
+                        <div class="btn-bottom cancle-btn">
+                            Cancel
+                        </div>
+                    </a>
+                 </div>
+
+                <div class="col">
+                    <a href="#">
+                        <div class="btn-bottom quick-btn">
+                            Quick printing
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#">
+                        <div class="btn-bottom normal-btn">
+                            Normal printing
+                        </div>
+                    </a>
+                </div>
+             </div>
+        </div>
     </div>
 </div>
+
