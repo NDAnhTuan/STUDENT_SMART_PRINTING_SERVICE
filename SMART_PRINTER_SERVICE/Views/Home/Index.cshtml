@@ -2,7 +2,410 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage - SMART_PRINTER_SERVICE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="homepage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+<body style="
+      padding-top: 0px;
+      font-family: 'Roboto';
+  ">
+    <div class="page-grid">
+        <div class="box1-grid">
+            <div style="background-color: white; height: 30px; margin: 10px;">
+                <div class="history-and-view-available">
+                    Available printers
+                </div>
+            </div>
+            <div></div>
+            <div class="printers-box">
+                <div class="printers">
+                    Printers
+                    <div class="absolute">
+                        Available
+                    </div>
+                </div>
+                <div style=" font-size: 12px; line-height: 20px; padding-left: 5px;">
+                    Floor 3-H6
+                </div>
+                <div style=" font-size: 14px; line-height: 20px; font-weight: 600; padding-left: 5px;">
+                    Connected
+                </div>
+                <div style="padding-left: 5px; line-height: 30px;">
+                    <img class="search" src="Images/search.png">
+                    <img class="check" src="Images/check.png">
+                </div>
+            </div>
+            <div class="printers-box">
+                <div class="printers">
+                    Printers
+                    <div class="absolute">
+                        Unavailable
+                    </div>
+                </div>
+                <div style=" font-size: 12px; line-height: 20px; padding-left: 5px;">
+                    Underground H6
+                </div>
+                <div style=" font-size: 14px; line-height: 20px; font-weight: 600; padding-left: 5px;">
+                    Offline
+                </div>
+                <div style="padding-left: 5px; line-height: 30px;">
+                    <img class="search" src="Images/search.png">
+                    <img class="check" src="Images/check.png">
+                </div>
+            </div>
+        </div>
+        <div class="box2-grid">
+            <div class="welcome-grid">
+                <div class="welcome">
+                    Welcome back,Nguyễn Văn A
+                </div>
+                <div class="dog">
+                    <img class="doggo" src="Images/dog.png">
+                </div>
+            </div>
+            <div class="money-and-pages-box">
+                <div class="icon-money-and-pages">
+                    <i class="fa fa-dollar" style="font-size:32px; position: absolute; left: 35%; right: 35%; top: 25%; bottom: 10%;"></i>
+                </div>
+                <div class="welcome">
+                    500.000 VND
+                </div>
+                <div style="background-color: #E6E0E9;">
+                    <button class="recharge-buyprinting-button">
+                        Recharge money
+                    </button>
+                </div>
+                <div class="icon-money-and-pages">
+                    <i class="fa fa-file-o" style="font-size:32px; position: absolute; left: 35%; right: 35%; top: 25%; bottom: 10%;"></i>
+                </div>
+                <div class="welcome">
+                    2 page(s)
+                </div>
+                <div style="background-color: #E6E0E9;">
+                    <button class="recharge-buyprinting-button">
+                        Buy printing pages
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: white; height: 420px;">
+            <div class="flexbox">
+                <div class="history-and-view-available">Printing history</div>
+                <div>
+                    <button class="view-all">
+                        View all 	<i style="font-size:19px; width: 14px;" class="fa">&#xf105;</i>
+                    </button>
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Trấn Thành onlyfans
+                        </p>
+                        <p class="file-price">
+                            2.000.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    6/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            HK231_CNPM_leaked final
+                        </p>
+                        <p class="file-price">
+                            20.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    4/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            HK231_CNPM_leaked final
+                        </p>
+                        <p class="file-price">
+                            20.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    4/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            BK H7 building plan
+                        </p>
+                        <p class="file-price">
+                            20.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    4/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            HTML for noobs
+                        </p>
+                        <p class="file-price">
+                            3.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    2/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Demo rap viet season 4
+                        </p>
+                        <p class="file-price">
+                            5.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    1/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Cách tránh NVQS 2023
+                        </p>
+                        <p class="file-price">
+                            5.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    1/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Learn DSA in 5 minutes before test
+                        </p>
+                        <p class="file-price">
+                            10.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    24/9/2023
+                </div>
+            </div>
+        </div>
+        <div style="background-color: white; height: 420px;">
+            <div class="flexbox">
+                <div class="history-and-view-available">View order</div>
+                <div>
+                    <button class="view-all">
+                        View all 	<i style="font-size:19px; width:14px" class="fa">&#xf105;</i>
+                    </button>
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Giấy khám NVQS
+                        </p>
+                        <p class="file-price">
+                            Deleted
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    9/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Đề cương giải tích 2
+                        </p>
+                        <p class="file-price">
+                            Deleted
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    1/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            How to sleep with deadline waiting
+                        </p>
+                        <p class="file-price">
+                            3.000 VND-waiting
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    1/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Đồ án tốt nghiệp 2030
+                        </p>
+                        <p class="file-price">
+                            4.000 VND-Waiting
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    1/10/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Learn DSA in 5 minutes before test
+                        </p>
+                        <p class="file-price">
+                            10.000 VND-Finished
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    24/9/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Rất đừng phương Nam leaked
+                        </p>
+                        <p class="file-price">
+                            10.000 VND-Finished
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    24/9/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Từ nơi tôi sinh ra lyrics
+                        </p>
+                        <p class="file-price">
+                            10.000 VND-Finished
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    24/9/2023
+                </div>
+            </div>
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="Images/file.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            Đất rừng phương Nam script
+                        </p>
+                        <p class="file-price">
+                            500 VND-Finished
+                        </p>
+                    </div>
+                </div>
+                <div class="date">
+                    24/9/2023
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

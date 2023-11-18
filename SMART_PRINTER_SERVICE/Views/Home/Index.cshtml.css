@@ -1,0 +1,228 @@
+﻿button {
+    font-family: 'Roboto';
+}
+
+.page-grid {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.box1-grid {
+    background-color: white;
+    height: 250px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box2-grid {
+    background: #E6E0E9;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    height: 250px;
+    border-width: 1px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+}
+
+.welcome-grid {
+    background-color: #E6E0E9;
+    height: 70px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 7.5fr 1fr;
+    column-gap: 5px;
+}
+
+.printers-box {
+    background-color: white;
+    height: 190px;
+    margin: 10px;
+    border-style: solid;
+    border-radius: 7px;
+    border-width: 0.1px;
+    border-color: rgb(162, 158, 158);
+}
+
+.printers {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    position: relative;
+    border-top-style: none;
+    border-radius: 6px 0px;
+    border-width: 0.1px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.absolute {
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(189, 188, 188);
+    border-radius: 6px 0px;
+    border-width: 0.1px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.welcome {
+    background: #E6E0E9;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align: center;
+    border-width: 1px;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.money-and-pages-box {
+    background-color: #E6E0E9;
+    height: 160px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.dog {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 60px;
+}
+
+.doggo {
+    height: 50px;
+}
+
+.icon-money-and-pages {
+    background-color: #E6E0E9;
+    padding-top: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.recharge-buyprinting-button {
+    background: #D0BCFF;
+    border: 5px solid #6C757D;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.64);
+    height: 100%;
+    width: 90%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: box-shadow 0.15s;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-width: 1px;
+    height: 40px;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.view-all {
+    padding-left: 8px;
+    padding-bottom: 5px;
+    padding-top: 0px;
+    text-align: match-parent;
+    cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.history-and-view-available {
+    background-color: white;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.flexbox2 {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-style: solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-width: 0.1px;
+    height: 47px;
+    align-items: center;
+}
+
+.file-name {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 5px;
+    margin-bottom: 5px;
+}
+
+.file-info-grid {
+    margin-top: 9px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+
+.file-picture {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-top: 6px;
+    text-align: center;
+    width: 25px;
+    height: 29px;
+    border-radius: 25px;
+    border-style: none;
+}
+
+.file-price {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    ;
+}
+
+.date {
+    width: 67px;
+    height: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.profile-picture {
+    width: 80%;
+    height: 70%;
+}
+
+.search {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    margin-top: 10px;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    margin-top: 10px;
+}
