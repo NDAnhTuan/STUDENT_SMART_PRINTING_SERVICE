@@ -1,0 +1,182 @@
+﻿﻿ /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.main-full-screen {
+    height: 100%;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 55px;
+    background-color: rgba(247,242,250,255);
+    z-index: 1;
+    user-select: none;
+}
+
+.navbar {
+    background-color: rgba(247,242,250,255) !important;
+}
+
+    .navbar .container-fluid, .navbar .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(247,242,250,255) !important;
+    }
+
+.container-fluid {
+    background-color: rgba(247,242,250,255) !important;
+}
+
+.navbar .navbar-nav .nav-item {
+    list-style: none; /* Loại bỏ kiểu danh sách mặc định */
+    margin-left: 20px; /* Điều này giữ cho thẻ <a> cách chấm tròn 20px */
+    position: relative; /* Tạo vị trí tương đối cho thẻ <a> */
+}
+
+    .navbar .navbar-nav .nav-item::before {
+        content: "\2022"; /* Mã Unicode của chấm tròn */
+        color: #000; /* Màu của chấm tròn */
+        font-size: 36px;
+        display: inline; /* Hiển thị chấm tròn trên cùng một dòng */
+        position: absolute; /* Đặt vị trí tuyệt đối cho chấm tròn */
+        left: -20px; /* Điều này giữ cho chấm tròn cách thẻ <a> 20px */
+        margin-top: -9px;
+    }
+
+.navbar-nav li a {
+    display: inline; /* Đảm bảo thẻ <a> nằm trên cùng một dòng với chấm tròn */
+}
+
+.navbar .navbar-nav > li:hover {
+    background-color: #ede9f1;
+    border: 1px solid #000000 !important;
+    border-radius: 10px; /* Bo tròn góc của mục khi di chuột */
+    transition: background-color 0.3s; /* Tạo hiệu ứng màu nền mượt mà */
+}
+
+.footer-nav {
+    padding: 0 12px;
+    background-color: #e6e0e9;
+    border-radius: 20px;
+}
+
+.title-header {
+    height: 110px;
+    display: inherit;
+    position: fixed;
+    top: 0;
+    left: 360px;
+    right: 0;
+    /*margin-left: 360px;*/
+    padding: 8px;
+    z-index: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #d0bcff;
+    user-select: none;
+}
+
+    .title-header .title-header-intro {
+        height: 100%;
+        display: flex;
+    }
+
+        .title-header .title-header-intro .title-header-intro-content {
+            display: inline-block;
+            font-size: 24px;
+            text-align: center;
+            line-height: 110px;
+            z-index: 2;
+            padding-left: 16px;
+        }
+
+        .title-header .title-header-intro .title-header-intro-logo {
+            height: 100%;
+            display: inline-block;
+        }
+
+.title-header-logout {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-header-logout-container {
+    display: flex;
+    padding: 8px;
+}
+
+    .title-header-logout-container:hover {
+        border: 1px solid #000000;
+        border-radius: 10px; /* Bo tròn góc của mục khi di chuột */
+        transition: background-color 0.3s;
+        cursor: pointer;
+    }
+
+    .title-header-logout-container .title-header-logout-text {
+        display: flex;
+        font-size: 24px;
+        padding-right: 8px;
+        font-weight: bold;
+    }
+
+    .title-header-logout-container .title-header-logout-icon {
+        font-size: 40px;
+    }
+
+
+main {
+    display: inherit;
+    position: absolute;
+    top: 110px;
+    width: 100%;
+}
+
+.container-fluid div {
+    width: 100%;
+}
+
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #0077cc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}

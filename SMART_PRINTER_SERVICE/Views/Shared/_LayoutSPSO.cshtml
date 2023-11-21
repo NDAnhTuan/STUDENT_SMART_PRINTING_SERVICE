@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SMART_PRINTER_SERVICE.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/font/themify-icons/themify-icons.css" />
     <link rel="stylesheet" href="~/font/themify-icons/themify-icons.css" />
     @*NHUNG FONT VAO PROJECJ*@
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,28 +21,22 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SMART_PRINTER_SERVICE</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                            aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="SPSOHome" asp-action="ManagePrinter">Manage Printer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Print">Print</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="SPSOHome" asp-action="ManagePrinting">Manage Printing</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="RechargeMoney">Recharge Money</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="SPSOHome" asp-action="ViewOrder">View Order</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BuyPrintingMoney">Buy Printing Money</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="OrderStatus" asp-action="OrderStatus">Order Status</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="History">History</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="SPSOHome" asp-action="ViewPrintingHistory">View Printing History</a>
                             </li>
                         </ul>
                     </div>
@@ -70,7 +63,7 @@
                 <div class="title-header-logout-container">
                     <div class="title-header-logout-text">Logout</div>
                     <i class="title-header-logout-icon ti-shift-right"></i>
-                </div> 
+                </div>
             </div>
         </div>
         <main role="main" class="main-full-screen pb-3">

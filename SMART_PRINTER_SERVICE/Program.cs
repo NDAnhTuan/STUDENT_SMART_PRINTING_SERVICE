@@ -22,7 +22,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "Login - SMART_PRINTER_SERVICE",
-    pattern: "{controller=Login}/{action=LoginTo}/{id?}");
+    pattern: "{controller=SPSOHome}/{action=ManagePrinter}/{id?}");
     //name: "login",
     //pattern: "LoginTo",
     //defaults: new { controller = "Login", action = "LoginTo" });
