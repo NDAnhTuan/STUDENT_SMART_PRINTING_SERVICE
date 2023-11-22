@@ -1,3 +1,165 @@
 @{
     Layout = "_LayoutSPSO";
 }
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recharge - SMART_PRINTER_SERVICE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="recharge.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-d3n4q0ofc8TzLpDIhG8sznhBwIJeNEFvhhQOp8YfL8eMh6f1kMzZL7iW9MKZQj3" crossorigin="anonymous">
+
+    <style>
+        .contain {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .paper-limit {
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        .form-group {
+            margin-right: 10px; 
+            width: 60%;
+        }
+
+        .btn-primary {
+            margin-left: 10px;
+            margin-top: 20px;
+            background-color: black;
+            height: 40px;
+            min-width: 100px;
+            align-self: flex-end;
+        }
+
+        .paper-type{
+            display: flex;
+            flex-direction: column;
+        }
+        .paper-type__item-contain{
+            display: flex;
+            flex-direction: row;
+            margin-top:10px;
+        }
+
+        .paper-type__button-contain{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #dcdcdc; 
+            margin-bottom: 5px; 
+            margin-left: 10px;
+            border-radius: 5px;
+            height: 30px;
+            min-width: 100px;
+        }
+
+        .item-text {
+            flex: 1; 
+            text-align: center;
+        }
+
+        .delete-icon {
+            margin-left: 10px;
+            cursor: pointer; 
+        }
+
+    </style>
+</head>
+
+<div style="background-color: white; height: 35px; align-items:center; position: relative; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);">
+    <button class="recharge-button" style="border: none; background-color: transparent; margin-top: 10px;">
+        <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i> Manage printing
+    </button>
+</div>
+<div class="contain">
+    
+    <div class="paper-limit">
+        <div class="form-group" style="">
+            <label for="exampleInputEmail1" style="font-weight:600">Paper limit</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter paper limit">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2 " style="padding-left: 10px" onclick="SavePaperLimit()">Save</button>
+    </div>
+    <div class="paper-type">
+        <label for="exampleInputEmail1" style="font-weight:600">Paper type</label>
+        <div class="paper-type__item-contain">
+            <div class="item">
+                <span class="item-text">pdf</span>
+                <span class="delete-icon" onclick="DeletePaperType()"><i class="fa fa-trash"></i></span>
+            </div>
+            <div class="item">
+                <span class="item-text">docx</span>
+                <span class="delete-icon" onclick="DeletePaperType()"><i class=" fa fa-trash"></i></span>
+            </div>
+        </div>
+        <div class="paper-type__button-contain">
+            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="AddPaperType()">Add</button>
+            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="SavePaperType()">Save</button>
+        </div>
+    </div>
+    <div class="paper-type">
+        <label for="exampleInputEmail1" style="font-weight:600">Paper format</label>
+        <div class="paper-type__item-contain">
+            <div class="item">
+                <span class="item-text">A4</span>
+                <span class="delete-icon onclick="DeletePaperFormat()"><i class="fa fa-trash"></i></span>
+            </div>
+            <div class="item">
+                <span class="item-text">A3</span>
+                <span class="delete-icon onclick="DeletePaperFormat()"><i class="fa fa-trash"></i></span>
+            </div>
+        </div>
+        <div class="paper-type__button-contain">
+            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="AddPaperFormat()">Add</button>
+            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="SavePaperFormat()">Save</button>
+        </div>
+    </div>
+    <div class="paper-limit">
+        <div class="form-group" style="">
+            <label for="exampleInputEmail1" style="font-weight:600">Refill day</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter refill day">
+            <small id="emailHelp" class="form-text text-muted">MM/DD/YYYY.</small>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px; margin-top:0" onclick="SaveRefillDay()">Save</button>
+    </div>
+</div>
+<script>
+    function SavePaperLimit() {
+        //Todo
+    }
+    function AddPaperType() {
+        //Todo
+    }
+    function SavePaperType() {
+        //Todo
+    }
+    function AddPaperFormat() {
+        //Todo
+    }
+    function SavePaperFormat() {
+        //Todo
+    }
+    function SaveRefillDay() {
+        //Todo
+    }
+    function DeletePaperType()
+    {
+        //Todo, nen them cai tham so nao do de biet la xoa paper type nao
+    }
+    function DeletePaperFormat() {
+        //Todo, nen them cai tham so nao do de biet la xoa paper type nao
+    }
+</script>
