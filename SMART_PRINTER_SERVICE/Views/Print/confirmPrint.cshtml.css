@@ -1,0 +1,78 @@
+﻿.container-confirm{
+    padding: 28px 12px 30px 12px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    /*justify-content: center;*/
+    /*position: relative;*/
+}
+.user-info .user-icon {
+    display: inline-block;
+    background-color: rgb(222, 222, 222);
+    border-radius: 50%;
+}
+    .user-info .user-text-info {
+        display: inline-block;
+       
+        top: 0;
+        bottom:0;
+        text-align: center;
+    }
+.user-info .user-text-info h3 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+    .user-info .user-text-info p {
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+.document-name {
+    border: 1px solid;
+    border-color: rgb(233, 233, 233);
+    border-radius: 6px;
+    margin-top: 12px;
+}
+.document-name p {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 0px;
+    padding: 8px 12px;
+}
+.confirm-info-group {
+    padding: 10px 0;
+}
+    .confirm-info-group .title-confirm {
+        margin-bottom: 0px;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    .confirm-info-group .display-info {
+        margin-top: 2px;
+        height: 30px;
+        border-radius: 6px;
+        border: 1px solid #0000001A;
+    }
+.btn-bottom-group {
+    gap: 10px;
+    margin-top: 15px;
+}
+ 

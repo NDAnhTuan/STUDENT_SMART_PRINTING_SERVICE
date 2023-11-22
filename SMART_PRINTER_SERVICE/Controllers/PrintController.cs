@@ -11,5 +11,9 @@ namespace SMART_PRINTER_SERVICE.Controllers
         {
             return View();
         }
+        public IActionResult confirmPrint()
+        {
+            return View();
+        }
     }
 }

@@ -20,10 +20,11 @@
 }
 .allow-type {
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 500; 
 }
 .container-text-content{
+    margin-top: 15px;
     margin-bottom: 22px;
 }
 .container-text-content .document-name {
@@ -110,27 +111,25 @@
     gap: 10px;
     margin-top: 15px;
 }
-.btn-bottom-group a{
-    text-decoration: none;
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 28px;
-    text-align: center;
+    /*.btn-bottom-group .col > a {
+        text-decoration: none;
+        font-size: 13px;
+        font-family: Roboto;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: center;
+    }*/
+    .btn-bottom-group .btn-text {
+        text-decoration: none;
 
-}
-.btn-bottom-group .btn-bottom{
-    padding: 5px 5px;
-}
-.btn-bottom-group .cancle-btn{
-    border: solid black 1px;
-    color: black;
-    border-radius: 10px;
-    background-color: white;
-}
-.btn-bottom-group .quick-btn,
-.btn-bottom-group .normal-btn {
-    background-color: black;
-    border-radius: 10px;
-    color: white;
-}
+        font-size: 13px;
+        font-family: Roboto;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: center;
+    }
+    .btn-bottom-group .btn-bottom {
+        padding: 5px 5px;
+     
+    }
+

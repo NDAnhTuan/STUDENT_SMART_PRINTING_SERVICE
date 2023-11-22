@@ -32,3 +32,26 @@ header {
     padding: 0;
     /*top: 110px;*/
 }
+.cancle-btn {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+}
+.confirm-btn {
+    border: solid black 1px;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+}
+.top-back-nav {
+    box-shadow: 0px 1px 2px 0px rgba(191,180,180,0.63);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(191,180,180,0.63);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(191,180,180,0.63);
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 5px 15px;
+}

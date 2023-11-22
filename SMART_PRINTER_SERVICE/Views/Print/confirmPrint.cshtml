@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*<div style="background-color: white; height: 35px; align-items:center; position: relative; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);">
+    <button class="recharge-button" style="border: none; background-color: transparent; margin-top: 10px;">
+        <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i> Print
+    </button>
+</div>*@
+<div class="top-back-nav">
+    <a asp-area="" asp-controller="Print" asp-action="PrintPreview" style="text-decoration: none; color: black">
+        <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"> </i>
+    </a>
+    Confirm
+</div>
+<div class="container-confirm">
+    <div class="user-info">
+
+        <div class="user-icon">
+            <img src="~/Images/avtIcon.svg" />
+        </div>
+        <div class="user-text-info">
+            <h3>Welcome Nguyen Van A</h3>
+            <p>uploaded a document</p>
+        </div>
+    </div>
+    <div class="document-name">
+        <p>
+            CSS for idiots.pdf
+        </p>
+    </div>
+
+    <div class="confirm-info-group">
+        <p class="title-confirm"> Paper format</p>
+        <div class="display-info"> </div>
+    </div>
+
+    <div class="confirm-info-group">
+        <p class="title-confirm"> Print color</p>
+        <div class="display-info"> </div>
+    </div>
+
+    <div class="confirm-info-group">
+        <p class="title-confirm"> Print format</p>
+        <div class="display-info"> </div>
+    </div>
+
+    <div class="confirm-info-group">
+        <p class="title-confirm"> Printer</p>
+        <div class="display-info"> </div>
+    </div>
+
+    <div class="confirm-info-group">
+        <p class="title-confirm"> Printed Pages</p>
+        <div class="display-info"> </div>
+    </div>
+
+    <div class="confirm-info-group">
+        <p class="title-confirm"> Number of pages</p>
+        <div class="display-info"> </div>
+    </div>
+
+    <div class="confirm-info-group">
+        <p class="title-confirm"> Number of copies</p>
+        <div class="display-info"> </div>
+    </div>
+    <div class="row gx-0 btn-bottom-group">
+        <div class="col">
+            <a asp-area="" asp-controller="Print" asp-action="PrintPreview" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
+        font-weight: 500;">
+                <div class="btn-bottom cancle-btn">
+                    Cancle
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a asp-area="" asp-controller="Home" asp-action="Print" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
+        font-weight: 500;">
+                <div class="btn-bottom confirm-btn">
+                    Confirm
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

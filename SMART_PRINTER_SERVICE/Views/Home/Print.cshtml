@@ -2,22 +2,18 @@
     ViewData["Title"] = "UploadPage";
 }
 @*<h1>@ViewData["Title"]</h1>*@
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recharge - SMART_PRINTER_SERVICE</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="recharge.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-d3n4q0ofc8TzLpDIhG8sznhBwIJeNEFvhhQOp8YfL8eMh6f1kMzZL7iW9MKZQj3" crossorigin="anonymous">
-</head>
 
-<div style="background-color: white; height: 35px; align-items:center; position: relative; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);">
+
+@*<div style="background-color: white; height: 35px; align-items:center; position: relative; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);">
     <button class="recharge-button" style="border: none; background-color: transparent; margin-top: 10px;">
         <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i> Print
     </button>
+</div>*@
+<div class="top-back-nav">
+    <a asp-area="" asp-controller="Home" asp-action="Index" style="text-decoration: none; color: black">
+        <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"> </i>
+    </a>
+    Upload
 </div>
 <h5 style="font-size=60px; font-weight: 600; padding: 30px;">
     Choose a file to upload: (Accepted type: PDF, Word, JPG/JPEG, TIFF, AI)

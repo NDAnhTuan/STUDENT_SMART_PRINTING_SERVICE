@@ -22,14 +22,14 @@ namespace SMART_PRINTER_SERVICE.Controllers
         {
             return View();
         }
-        public IActionResult Upload() 
-        {
-            return View();
-        }
-        public IActionResult PrintPreview()
-        {
-            return View();
-        }
+        //public IActionResult Upload() 
+        //{
+        //    return View();
+        //}
+        //public IActionResult PrintPreview()
+        //{
+        //    return View();
+        //}
         public IActionResult RechargeMoney()
         {
             return View();
