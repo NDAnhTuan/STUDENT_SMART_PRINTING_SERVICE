@@ -60,8 +60,10 @@ for details on configuring this project to bundle and minify static web assets. 
     transition: background-color 0.3s; /* Tạo hiệu ứng màu nền mượt mà */
 }
 
-.navbar .navbar-nav > li:active {
-    background-color: #e8def8;
+.active {
+    background-color: #e8def8 !important;
+    border-radius: 10px; /* Bo tròn góc của mục khi di chuột */
+    transition: background-color 0.3s; /* Tạo hiệu ứng màu nền mượt mà */
 }
 
 .footer-nav {
