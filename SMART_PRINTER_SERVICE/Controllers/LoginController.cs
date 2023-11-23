@@ -17,6 +17,10 @@ namespace SMART_PRINTER_SERVICE.Controllers
         {
             return View();
         }
+        public IActionResult LoginAs()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

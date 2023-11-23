@@ -27,5 +27,5 @@ app.MapControllerRoute(
     //pattern: "LoginTo",
     //defaults: new { controller = "Login", action = "LoginTo" });
     name: "Login - SMART_PRINTER_SERVICE",
-    pattern: "{controller=SPSOHome}/{action=ManagePrinter}/{id?}");
+    pattern: "{controller=Login}/{action=LoginAs}/{id?}");
 app.Run();

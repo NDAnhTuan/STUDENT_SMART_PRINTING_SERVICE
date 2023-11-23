@@ -13,7 +13,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
             _logger = logger;
         }
 
-        public IActionResult LoginAs()
+        public IActionResult LoginAsPage()
         {
             return View();
         }
