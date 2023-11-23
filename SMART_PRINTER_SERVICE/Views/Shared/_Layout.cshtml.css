@@ -24,28 +24,28 @@ for details on configuring this project to bundle and minify static web assets. 
 .navbar .container-fluid, .navbar .navbar-nav {
     display: flex;
     flex-direction: column;
-    background-color: rgba(247,242,250,255) !important;
+    background-color: rgba(247,242,250,255) ;
 }
 
 .container-fluid {
-    background-color: rgba(247,242,250,255) !important;
+    background-color: rgba(247,242,250,255) ;
 }
 
 .navbar .navbar-nav .nav-item {
     list-style: none; /* Loại bỏ kiểu danh sách mặc định */
-    margin-left: 20px; /* Điều này giữ cho thẻ <a> cách chấm tròn 20px */
+    padding-left: 20px; /* Điều này giữ cho thẻ <a> cách chấm tròn 20px */
     position: relative; /* Tạo vị trí tương đối cho thẻ <a> */
 }
 
-.navbar .navbar-nav .nav-item::before {
-    content: "\2022"; /* Mã Unicode của chấm tròn */
-    color: #000; /* Màu của chấm tròn */
+/*.navbar .navbar-nav .nav-item::before {
+    content: "\2022";  Mã Unicode của chấm tròn 
+    color: #000;  Màu của chấm tròn 
     font-size: 36px;
-    display: inline; /* Hiển thị chấm tròn trên cùng một dòng */
-    position: absolute; /* Đặt vị trí tuyệt đối cho chấm tròn */
-    left: -20px; /* Điều này giữ cho chấm tròn cách thẻ <a> 20px */
+    display: inline;  Hiển thị chấm tròn trên cùng một dòng 
+    position: absolute;  Đặt vị trí tuyệt đối cho chấm tròn 
+    left: -20px;  Điều này giữ cho chấm tròn cách thẻ <a> 20px 
     margin-top: -9px;
-}
+}*/
 
 .navbar-nav li a {
     display: inline; /* Đảm bảo thẻ <a> nằm trên cùng một dòng với chấm tròn */
@@ -58,8 +58,15 @@ for details on configuring this project to bundle and minify static web assets. 
     transition: background-color 0.3s; /* Tạo hiệu ứng màu nền mượt mà */
 }
 
+.active {
+    background-color: #e8def8 !important;
+    
+    border-radius: 10px; /* Bo tròn góc của mục khi di chuột */
+    transition: background-color 0.3s; /* Tạo hiệu ứng màu nền mượt mà */
+}
+
 .footer-nav {
-    padding: 0 12px;
+    padding: 12px 12px;
     background-color: #e6e0e9;
     border-radius: 20px;
 }

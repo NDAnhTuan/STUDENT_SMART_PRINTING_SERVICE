@@ -13,7 +13,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult HomePage()
         {
             return View();
         }
