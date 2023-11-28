@@ -1,4 +1,5 @@
 ﻿
+
 .container-content{
     padding: 0 40px;
     height: 100%;
@@ -91,7 +92,7 @@
     line-height: 25px;
     letter-spacing: 0em;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 3px;
 }
 .default-in-input {
@@ -109,7 +110,8 @@
 }
 .btn-bottom-group{
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
     /*.btn-bottom-group .col > a {
         text-decoration: none;

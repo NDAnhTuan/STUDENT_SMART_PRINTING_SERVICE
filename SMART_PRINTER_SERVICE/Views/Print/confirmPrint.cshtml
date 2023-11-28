@@ -9,6 +9,17 @@
         <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i> Print
     </button>
 </div>*@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recharge - SMART_PRINTER_SERVICE</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    @*<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-d3n4q0ofc8TzLpDIhG8sznhBwIJeNEFvhhQOp8YfL8eMh6f1kMzZL7iW9MKZQj3" crossorigin="anonymous">
+
+</head>
 <div class="top-back-nav">
     <a asp-area="" asp-controller="Print" asp-action="PrintPreview" style="text-decoration: none; color: black">
         <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"> </i>
@@ -78,10 +89,26 @@
         <div class="col">
             <a asp-area="" asp-controller="Home" asp-action="Print" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
         font-weight: 500;">
-                <div class="btn-bottom confirm-btn">
+                <div class="btn-bottom confirm-btn" onclick="submit()">
                     Confirm
                 </div>
             </a>
         </div>
     </div>
 </div>
+
+<script>
+    let blance_list = document.querySelectorAll(".confirm-info-group .display-info");
+    blance_list[0].innerHTML= localStorage.getItem('paper');
+    blance_list[1].innerHTML = localStorage.getItem('color');
+    blance_list[2].innerHTML = localStorage.getItem('format');
+    blance_list[3].innerHTML = localStorage.getItem('printer');
+    blance_list[4].innerHTML = localStorage.getItem('printingPage');
+    blance_list[6].innerHTML = localStorage.getItem('numOfCopies');
+    let pages = localStorage.getItem('printingPage').split("-");
+    if (pages.length>1){
+      
+        console.log("lenght: ",pages.length);
+        blance_list[5].innerHTML = pages[1]-pages[0];
+    }
+</script>

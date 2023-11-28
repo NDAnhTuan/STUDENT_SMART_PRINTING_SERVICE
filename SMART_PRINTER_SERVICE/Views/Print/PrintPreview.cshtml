@@ -1,16 +1,16 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "View";
 }
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recharge - SMART_PRINTER_SERVICE</title>
-   @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
     @*<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-d3n4q0ofc8TzLpDIhG8sznhBwIJeNEFvhhQOp8YfL8eMh6f1kMzZL7iW9MKZQj3" crossorigin="anonymous">
+   
 </head>
 <div class="top-back-nav">
     <a asp-area="" asp-controller="Home" asp-action="Print" style="text-decoration: none; color: black">
@@ -19,7 +19,7 @@
     Print preview
 </div>
 <div class=" container-content">
-   
+
     <div class="container-text-content">
         <p class="allow-type">Choose a file to upload: (Accept type: PDF, Word, JPG/JPEG, TIFF, AI)</p>
         <div class="document-name">
@@ -33,71 +33,71 @@
         <div class="col  preview-window"></div>
         <div class="col property-window">
             <h2 class="printer">Printer</h2>
-            <div class="btn-group " role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="btn-group printer-group " role="group">
+                <button id="printer-btn" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
                     Chooose a printer
                 </button>
-                <ul class="dropdown-menu choose-btn" aria-labelledby="btnGroupDrop1">
-                    <li><a class="dropdown-item" href="#">Floor 5 H2</a></li>
-                    <li><a class="dropdown-item" href="#">Canteen H3</a></li>
-                    <li><a class="dropdown-item" href="#">WC H6</a></li>
-                    <li><a class="dropdown-item" href="#">Parking lot</a></li>
+                <ul class="dropdown-menu choose-btn p-0" aria-labelledby="btnGroupDrop1">
+                    <li><p class="dropdown-item m-0" >Floor 5 H2</p></li>
+                    <li><p class="dropdown-item m-0" >Canteen H3</p></li>
+                    <li><p class="dropdown-item m-0" >WC H6</p></li>
+                    <li><p class="dropdown-item m-0" >Parking lot</p></li>
                 </ul>
             </div>
             <form>
-                <label class="printed-pages" for="Ppages">Printed pages</label><br>
-                <input type="text" class="default-in-input" name="Ppages" placeholder="Write in format x-y, if empty then print all pages"><br>
-             </form>
-             <div class="btn-group " role="group">
-                <button id="btnGroupDrop2" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                <label class="printed-pages" for="Ppages">Printing pages</label><br>
+                <input type="text" id="blank-printing-pages"class="default-in-input" name="Ppages" placeholder="Write in format x-y, if empty then print all pages"><br>
+            </form>
+            <div class="btn-group paper-group" role="group">
+                <button id="paper-btn" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
                     Paper
                 </button>
-                <ul class="dropdown-menu choose-btn" aria-labelledby="btnGroupDrop1">
-                    <li><a class="dropdown-item" href="#">A4</a></li>
-                    <li><a class="dropdown-item" href="#">A3</a></li>
-                    <li><a class="dropdown-item" href="#">Letter</a></li>
-                    <li><a class="dropdown-item" href="#">Legal</a></li>
+                <ul class="dropdown-menu choose-btn p-0" aria-labelledby="btnGroupDrop1">
+                    <li><p class="dropdown-item m-0" href="#">A4</p></li>
+                    <li><p class="dropdown-item m-0" href="#">A3</p></li>
+                    <li><p class="dropdown-item m-0" href="#">Letter</p></li>
+                    <li><p class="dropdown-item m-0" href="#">Legal</p></li>
                 </ul>
             </div>
             <br />
-            <div class="btn-group " role="group">
-                <button id="btnGroupDrop3" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="btn-group color-group" role="group">
+                <button id="color-btn" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
                     Color
                 </button>
-                <ul class="dropdown-menu choose-btn" aria-labelledby="btnGroupDrop1">
-                    <li><a class="dropdown-item" href="#">Black/White</a></li>
-                    <li><a class="dropdown-item" href="#">Color</a></li>
-                    <li><a class="dropdown-item" href="#">Grayscale</a></li>
-                    <li><a class="dropdown-item" href="#">Spot color</a></li>
+                <ul class="dropdown-menu choose-btn p-0" aria-labelledby="btnGroupDrop1">
+                    <li><p class="dropdown-item m-0" href="#">Black/White</p></li>
+                    <li><p class="dropdown-item m-0" href="#">Color</p></li>
+                    <li><p class="dropdown-item m-0" href="#">Grayscale</p></li>
+                    <li><p class="dropdown-item m-0" href="#">Spot color</p></li>
                 </ul>
             </div>
             <br />
-            <div class="btn-group " role="group">
-                <button id="btnGroupDrop4" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                   Format
+            <div class="btn-group format-group" role="group">
+                <button id="format-btn" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    Format
                 </button>
-                <ul class="dropdown-menu choose-btn" aria-labelledby="btnGroupDrop1">
-                    <li><a class="dropdown-item" href="#">Double sided</a></li>
-                    <li><a class="dropdown-item" href="#">Single sides</a></li>
-                 
+                <ul class="dropdown-menu choose-btn p-0" aria-labelledby="btnGroupDrop1">
+                    <li><p class="dropdown-item m-0" href="#">Double sided</p></li>
+                    <li><p class="dropdown-item m-0" href="#">Single sides</p></li>
+
                 </ul>
             </div>
-             <form>
+            <form>
                 <label class="printed-pages" for="num-of-cops">Number of copies</label><br>
-                <input type="text" id="" class="default-in-input" name="Ppages" placeholder="Enter number, 1 for default"><br>
-             </form>
+                <input type="text" id="blank-copies" class="default-in-input" name="num-of-cops" placeholder="Enter number, 1 for default"><br>
+            </form>
             <div class="row gx-0 btn-bottom-group">
-                 <div class="col">
+                <div class="col">
                     <a asp-area="" asp-controller="Home" asp-action="Print" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
         font-weight: 500;">
                         <div class="btn-bottom cancle-btn">
                             Cancel
                         </div>
                     </a>
-                 </div>
+                </div>
 
                 <div class="col">
-                    <a asp-area="" asp-controller="Print" asp-action="confirmPrint" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
+                    <a onclick="getInfoPrint()" asp-area="" asp-controller="Print" asp-action="confirmPrint" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
         font-weight: 500;">
                         <div class="btn-bottom confirm-btn">
                             Quick printing
@@ -105,15 +105,73 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a asp-controller="Print" asp-action="confirmPrint" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
+                    <a onclick="getInfoPrint()" asp-controller="Print" asp-action="confirmPrint" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
         font-weight: 500;">
                         <div class="btn-bottom confirm-btn ">
                             Normal printing
                         </div>
                     </a>
                 </div>
-             </div>
+            </div>
         </div>
     </div>
 </div>
+<script>
+    //set default for property
+    let temp="";
+    localStorage.setItem("printer", temp);
+    localStorage.setItem("format", temp);
+    localStorage.setItem("paper", temp);
+    localStorage.setItem("color", temp);    
+    temp = "print all pages";
+    localStorage.setItem("printingPage", temp);
+    temp=1;
+    localStorage.setItem("numOfCopies", temp);
+    console.log("printingPages: ",localStorage.getItem("printingPage"));
 
+    const printer = document.getElementById("printer-btn");
+    const color = document.getElementById("color-btn");
+    const paper = document.getElementById("paper-btn");
+    const format = document.getElementById("format-btn");
+    let subPrinters = document.querySelectorAll(".printer-group .dropdown-item");
+    let subFormats = document.querySelectorAll(".format-group .dropdown-item");
+    let subColors = document.querySelectorAll(".color-group .dropdown-item");
+    let subPapers = document.querySelectorAll(".paper-group .dropdown-item");
+    function getInfoPrint(){
+        let printingPage = document.getElementById("blank-printing-pages").value;
+        let numOfCopies = document.getElementById("blank-copies").value;
+        if (printingPage.length>0)
+        {localStorage.setItem("printingPage", document.getElementById("blank-printing-pages").value);}
+        if (numOfCopies.length>0)
+        {localStorage.setItem("numOfCopies", document.getElementById("blank-copies").value);}
+    }
+    for (let i = 0; i < subPrinters.length; i++) {
+        subPrinters[i].addEventListener("click", function () {
+            printer.innerText = subPrinters[i].innerHTML;
+            localStorage.setItem("printer", printer.innerText);
+        })
+    }
+
+    for (let i = 0; i < subFormats.length; i++) {
+        subFormats[i].addEventListener("click", function () {
+            format.innerText = subFormats[i].innerHTML;
+            localStorage.setItem("format", format.innerText);
+        })
+    }
+
+    
+    console.log(localStorage.getItem('printer'));
+    for (let i = 0; i < subPapers.length; i++) {
+        subPapers[i].addEventListener("click", function () {
+           paper.innerText = subPapers[i].innerHTML;
+            localStorage.setItem("paper", paper.innerText);
+        })
+    }
+
+    for (let i = 0; i < subColors.length; i++) {
+        subColors[i].addEventListener("click", function () {
+            color.innerText = subColors[i].innerHTML;
+            localStorage.setItem("color", color.innerText);
+        })
+    }
+</script>

@@ -56,21 +56,22 @@
 .confirm-info-group {
     padding: 10px 0;
 }
-    .confirm-info-group .title-confirm {
-        margin-bottom: 0px;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: 0em;
-        text-align: left;
-    }
-    .confirm-info-group .display-info {
-        margin-top: 2px;
-        height: 30px;
-        border-radius: 6px;
-        border: 1px solid #0000001A;
-    }
+.confirm-info-group .title-confirm {
+    margin-bottom: 0px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.confirm-info-group .display-info {
+    padding: 2px 5px;
+    margin-top: 2px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid #0000001A;
+}
 .btn-bottom-group {
     gap: 10px;
     margin-top: 15px;
