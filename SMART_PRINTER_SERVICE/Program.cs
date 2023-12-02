@@ -1,3 +1,5 @@
+using SMART_PRINTER_SERVICE;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,27 +7,9 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+// Use the startup configuration
+var env = app.Environment;
+var startup = new Startup(app.Configuration);
+startup.Configure(app, env);
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    /*name: "Login - SMART_PRINTER_SERVICE",
-    pattern: "{controller=SPSOHome}/{action=ManagePrinter}/{id?}");*/
-    //name: "login",
-    //pattern: "LoginTo",
-    //defaults: new { controller = "Login", action = "LoginTo" });
-    name: "Login - SMART_PRINTER_SERVICE",
-    pattern: "{controller=Login}/{action=LoginAs}/{id?}");
 app.Run();

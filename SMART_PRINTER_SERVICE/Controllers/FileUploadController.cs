@@ -17,6 +17,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
         }
 
         [HttpPost]
+        [Route("UploadFile")]
         public async Task<IActionResult> UploadFile()
         {
             _logger.LogInformation("FileUploadController - UploadFile action started.");
@@ -24,14 +25,13 @@ namespace SMART_PRINTER_SERVICE.Controllers
             var file = Request.Form.Files[0];
             if (file.Length > 0)
             {
-                var filePath = Path.Combine("Uploads", file.FileName);
+                var filePath = Path.Combine("wwwroot", "Uploads", file.FileName);
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await file.CopyToAsync(stream);
                 }
 
                 _logger.LogInformation("File uploaded successfully. Path: {FilePath}", filePath);
-
 
                 return Ok(new { Message = "File uploaded successfully", FilePath = filePath });
             }
