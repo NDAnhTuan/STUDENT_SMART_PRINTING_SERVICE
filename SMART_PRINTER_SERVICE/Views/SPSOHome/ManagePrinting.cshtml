@@ -30,7 +30,7 @@
             width: 60%;
         }
 
-        .btn-primary {
+        .btn-primary-new {
             margin-left: 10px;
             margin-top: 20px;
             background-color: black;
@@ -79,11 +79,11 @@
     </style>
 </head>
 
-<div style="background-color: white; height: 35px; align-items:center; position: relative; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);">
+@*<div style="background-color: white; height: 35px; align-items:center; position: relative; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);">
     <button class="recharge-button" style="border: none; background-color: transparent; margin-top: 10px;">
         <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i> Manage printing
     </button>
-</div>
+</div>*@
 <div class="contain">
     
     <div class="paper-limit">
@@ -91,7 +91,7 @@
             <label for="exampleInputEmail1" style="font-weight:600">Paper limit</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter paper limit">
         </div>
-        <button type="submit" class="btn btn-primary mb-2 " style="padding-left: 10px" onclick="SavePaperLimit()">Save</button>
+        <button type="submit" class="btn btn-primary btn-primary-new mb-2 " style="padding-left: 10px" onclick="SavePaperLimit()">Save</button>
     </div>
     <div class="paper-type">
         <label for="exampleInputEmail1" style="font-weight:600">Paper type</label>
@@ -106,8 +106,8 @@
             </div>
         </div>
         <div class="paper-type__button-contain">
-            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="AddPaperType()">Add</button>
-            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="SavePaperType()">Save</button>
+            <button type="submit" class="btn btn-primary btn-primary-new mb-2" style="padding-left: 10px" onclick="AddPaperType()">Add</button>
+            <button type="submit" class="btn btn-primary btn-primary-new mb-2" style="padding-left: 10px" onclick="SavePaperType()">Save</button>
         </div>
     </div>
     <div class="paper-type">
@@ -123,8 +123,8 @@
             </div>
         </div>
         <div class="paper-type__button-contain">
-            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="AddPaperFormat()">Add</button>
-            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="SavePaperFormat()">Save</button>
+            <button type="submit" class="btn btn-primary btn-primary-new mb-2" style="padding-left: 10px" onclick="AddPaperFormat()">Add</button>
+            <button type="submit" class="btn btn-primary btn-primary-new mb-2" style="padding-left: 10px" onclick="SavePaperFormat()">Save</button>
         </div>
     </div>
     <div class="paper-limit">
@@ -133,7 +133,7 @@
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter refill day">
             <small id="emailHelp" class="form-text text-muted">MM/DD/YYYY.</small>
         </div>
-        <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px; margin-top:0" onclick="SaveRefillDay()">Save</button>
+        <button type="submit" class="btn btn-primary btn-primary-new mb-2" style="padding-left: 10px;" onclick="SaveRefillDay()">Save</button>
     </div>
 </div>
 <script>
