@@ -210,6 +210,13 @@ a {
 }
 
 .modal-logout-header {
+    background-color: #009688;
+    height: 50px;
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-logout-close {
