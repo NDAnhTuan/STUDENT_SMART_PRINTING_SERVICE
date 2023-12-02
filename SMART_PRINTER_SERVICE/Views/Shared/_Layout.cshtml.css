@@ -7,7 +7,7 @@ for details on configuring this project to bundle and minify static web assets. 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 360px;
+    width: 300px;
     height: 100%;
     position: fixed;
     top: 0;
@@ -72,11 +72,11 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .title-header {
-    height: 110px;
+    height: 100px;
     display: inherit;
     position: fixed;
     top: 0;
-    left: 360px;
+    left: 300px;
     right: 0;
     /*margin-left: 360px;*/
     padding: 8px;
@@ -93,7 +93,7 @@ for details on configuring this project to bundle and minify static web assets. 
     display: inline-block;
     font-size: 24px;
     text-align: center;
-    line-height: 110px;
+    line-height: 100px;
     z-index: 2;
     padding-left: 16px;
 }
