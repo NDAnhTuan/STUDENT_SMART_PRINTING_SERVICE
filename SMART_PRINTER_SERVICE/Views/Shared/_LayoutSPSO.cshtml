@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SMART_PRINTER_SERVICE.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/font/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="recharge.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-d3n4q0ofc8TzLpDIhG8sznhBwIJeNEFvhhQOp8YfL8eMh6f1kMzZL7iW9MKZQj3" crossorigin="anonymous">
     @*NHUNG FONT VAO PROJECJ*@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +25,7 @@
         <div class="header-container">
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3">
                 <div class="container-fluid">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SMART_PRINTER_SERVICE</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="SPSOHome" asp-action="ManagePrinter">SMART_PRINTER_SERVICE</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -59,7 +65,7 @@
                 <div class="title-header-intro-logo"> <img src="~/img/BKLogo/logo-header.png" alt="" style="height: 100%; width: auto;"> </div>
                 <div class="title-header-intro-content">Ho Chi Minh City University of Technology</div>
             </div>
-            <div class="title-header-logout">
+            <div class="title-header-logout" onclick="showModalLogout()">
                 <div class="title-header-logout-container">
                     <div class="title-header-logout-text">Logout</div>
                     <i class="title-header-logout-icon ti-shift-right"></i>
@@ -69,6 +75,24 @@
         <main role="main" class="main-full-screen pb-3">
             @RenderBody()
         </main>
+    </div>
+    <div class="modal-logout js-modal">
+        <div class="modal-logout-container js-modal-container">
+            <div class="modal-logout-header">
+                <div class="modal-logout-close js-modal-close" onclick="closeModalLogout()">
+                    <i class="ti-close"></i>
+                </div>
+                Logout
+            </div>
+            <div class="modal-logout-body text-center">
+                <p>Do you want to Logout?</p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn btn-secondary" onclick = "closeModalLogout()" >Cancel</div>
+                <a class="btn btn-primary bg-danger" asp-controller="Login" asp-action="LoginTo">Logout</a>
+                
+            </div>
+        </div>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -119,18 +143,16 @@
             // Đặt lớp 'active' cho thẻ <a> được nhấp vào
             element.classList.add('active');
         }
-        function setActive(element) {
-            // Lấy tất cả các thẻ <a> trong thanh điều hướng
-            var navLinks = document.querySelectorAll('.navbar-nav .nav-item');
-
-            // Loại bỏ lớp 'active' từ tất cả các thẻ <a>
-            navLinks.forEach(function (link) {
-                link.classList.remove('active');
-            });
-
-            // Đặt lớp 'active' cho thẻ <a> được nhấp vào
-            element.classList.add('active');
+    </script>
+    <script>
+        function showModalLogout() {
+            document.querySelector('.modal-logout').classList.add('open');
         }
+
+        function closeModalLogout() {
+            document.querySelector('.modal-logout').classList.remove('open');
+        }
+        
 
     </script>
     @await RenderSectionAsync("Scripts", required: false)

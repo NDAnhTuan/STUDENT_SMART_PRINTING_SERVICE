@@ -186,3 +186,79 @@ a {
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+/*======Modal======*/
+.modal-logout {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.open {
+    display: flex;
+}
+
+.modal-logout-container {
+    background-color: #fff;
+    width: 400px;
+    max-width: calc(100%-32px);
+    position: relative;
+    animation: modalFadeIn ease 0.4s;
+}
+
+.modal-logout-header {
+    background-color: #d0bcff;
+    height: 50px;
+    font-size: 30px;
+    /*color: #fff;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-logout-close {
+    display: inline-block;
+    background-color: red;
+    padding: 16px;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+    .modal-logout-close:hover {
+        opacity: 1;
+    }
+
+.modal-logout-body {
+    height: calc(100% - 50px);
+    padding: 16px;
+}
+    .modal-logout-body > p {
+        margin: 0;
+    }
+
+    .modal-logout-but:hover {
+        background-color: #ccc;
+        color: #000;
+    }
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

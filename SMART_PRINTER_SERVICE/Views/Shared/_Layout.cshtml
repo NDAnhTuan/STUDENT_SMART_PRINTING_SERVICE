@@ -25,7 +25,7 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SMART_PRINTER_SERVICE</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                            aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
@@ -34,19 +34,19 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="HomePage">Home</a>
                             </li>
                             <li class="nav-item" onclick="setActive(this)">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Print" >Print</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Print">Print</a>
                             </li>
                             <li class="nav-item" onclick="setActive(this)">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="RechargeMoney" >Recharge Money</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="RechargeMoney">Recharge Money</a>
                             </li>
                             <li class="nav-item" onclick="setActive(this)">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BuyPrintingMoney" >Buy Printing Money</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BuyPrintingMoney">Buy Printing Money</a>
                             </li>
                             <li class="nav-item" onclick="setActive(this)">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="OrderStatus" asp-action="OrderStatus" >Order Status</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="OrderStatus" asp-action="OrderStatus">Order Status</a>
                             </li>
                             <li class="nav-item" onclick="setActive(this)">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="History" >History</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="History">History</a>
                             </li>
                         </ul>
                     </div>
@@ -69,16 +69,34 @@
                 <div class="title-header-intro-logo"> <img src="~/img/BKLogo/logo-header.png" alt="" style="height: 100%; width: auto;"> </div>
                 <div class="title-header-intro-content">Ho Chi Minh City University of Technology</div>
             </div>
-            <div class="title-header-logout">
+            <div class="title-header-logout" onclick="showModalLogout()">
                 <div class="title-header-logout-container">
                     <div class="title-header-logout-text">Logout</div>
                     <i class="title-header-logout-icon ti-shift-right"></i>
-                </div> 
+                </div>
             </div>
         </div>
         <main role="main" class="main-full-screen pb-3">
             @RenderBody()
         </main>
+    </div>
+    <div class="modal-logout js-modal">
+        <div class="modal-logout-container js-modal-container">
+            <header class="modal-logout-header" style="background-color: #009688; height: 50px; font-size: 30px; color: #fff; display: flex; align-items: center; justify-content: center;">
+                <div class="modal-logout-close js-modal-close" onclick="closeModalLogout()">
+                    <i class="ti-close"></i>
+                </div>
+                Logout
+            </header>
+            <div class="modal-logout-body text-center">
+                <p>Do you want to Logout?</p>
+            </div>
+            <div class="modal-footer">
+                <div class="btn btn-secondary" onclick="closeModalLogout()">Cancel</div>
+                <a class="btn btn-primary bg-danger" asp-controller="Login" asp-action="LoginTo">Logout</a>
+
+            </div>
+        </div>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -95,7 +113,7 @@
             }
             else {
                 console.log('Script is running!');
-                
+
                 console.log(navLinks);
                 navLinks.forEach(function (link) {
                     console.log('Script is running!');
@@ -114,7 +132,7 @@
                     }
                 });
             }
-            
+
         });
 
         function setActive(element) {
@@ -129,19 +147,16 @@
             // Đặt lớp 'active' cho thẻ <a> được nhấp vào
             element.classList.add('active');
         }
-        function setActive(element) {
-            // Lấy tất cả các thẻ <a> trong thanh điều hướng
-            var navLinks = document.querySelectorAll('.navbar-nav .nav-item');
-
-            // Loại bỏ lớp 'active' từ tất cả các thẻ <a>
-            navLinks.forEach(function (link) {
-                link.classList.remove('active');
-            });
-
-            // Đặt lớp 'active' cho thẻ <a> được nhấp vào
-            element.classList.add('active');
+    </script>
+    <script>
+        function showModalLogout() {
+            document.querySelector('.modal-logout').classList.add('open');
         }
-        
+
+        function closeModalLogout() {
+            document.querySelector('.modal-logout').classList.remove('open');
+        }
+
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
