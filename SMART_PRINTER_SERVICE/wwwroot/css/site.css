@@ -26,9 +26,9 @@ header {
 
 .container-home {
     /*width: 1120px;*/
-    width: calc(100% - 360px);
+    width: calc(100% - 300px);
     position: absolute;
-    left: 360px;
+    left: 300px;
     padding: 0;
     /*top: 110px;*/
 }

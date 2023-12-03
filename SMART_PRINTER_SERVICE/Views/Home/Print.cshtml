@@ -14,7 +14,7 @@
 
             <h5 class="mt-4">Choose a file to upload: (Accepted types: PDF, Word, JPG/JPEG, TIFF, AI)</h5>
 
-            <form method="post" enctype="multipart/form-data" action="/api/FileUpload/UploadFile">
+            <form method="post" enctype="multipart/form-data" asp-action="UploadFile" asp-controller="FileUpload">
                 <input type="file" name="file" style="display: none;" id="fileInput" />
                 <label for="fileInput" class="upload-label btn btn-outline-primary">
                     <i class="fa fa-upload"></i> Browse

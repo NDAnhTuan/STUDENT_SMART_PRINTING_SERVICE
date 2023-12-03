@@ -1,3 +1,61 @@
 @{
     Layout = "_LayoutSPSO";
 }
+<div class="container-ManagePrinter">
+    <div class="ManagePrinter-addPrinter text-center border">
+        <div class="addPrinter-title font-weight-bold"><h1>Add a Printer</h1></div>
+        <div class="btn btn-primary mb-2" style="padding-left: 10px" onclick="showModalAddPrinter()">Add</div>
+    </div>
+    <div class="ManagePrinter-addPrinter text-center border">
+        <div class="addPrinter-title font-weight-bold">
+            <input type="text" class="search-input" placeholder="Find a printer">
+            <i class="ti-search"></i>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="">Search</button>
+    </div>
+    <div class="ManagePrinter-table text-center">
+        <ul class="ManagePrinter-table-select row h-40">
+            <li class=" col table-select-click">Enable</li>
+            <li class=" col">Disable</li>
+        </ul>
+    </div>
+</div>
+
+@* ======= Model add printer ======== *@
+<div class="modal-add-printer js-modal">
+    <div class="modal-container js-modal-container">
+        <div class="modal-header">
+            <div class="modal-close js-modal-close" onclick="closeModalAddPrinter()">
+                <i class="ti-close"></i>
+            </div>
+            <i class="modal-icon ti-printer"></i>
+            Tickets
+        </div>
+        <div class="modal-body">
+            <label for="quantify-ticket" class="modal-label">
+                <i class="ti-user"></i>
+                Printer Name
+            </label>
+            <input type="text" id="quantify-ticket" class="modal-input" placeholder="Enter Name">
+            <label for="quantify-send" class="modal-label">
+                <i class="ti-location-pin"></i>
+                Add on
+            </label>
+            <input type="text" id="quantify-send" class="modal-input" placeholder="Enter Location">
+
+            <button class="modal-but">
+                Add
+                <i class="ti-check"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+    function showModalAddPrinter() {
+        document.querySelector('.modal-add-printer').classList.add('open');
+    }
+
+    function closeModalAddPrinter() {
+        document.querySelector('.modal-add-printer').classList.remove('open');
+    }
+</script>
