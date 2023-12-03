@@ -14,7 +14,7 @@
 
             <h5 class="mt-4">Choose a file to upload: (Accepted types: PDF, Word, JPG/JPEG, TIFF, AI)</h5>
 
-            <form method="post" enctype="multipart/form-data" asp-action="UploadFile" asp-controller="FileUpload">
+            <form method="post" enctype="multipart/form-data" asp-action="UploadFile" asp-controller="FileUpload" id="uploadForm">
                 <input type="file" name="file" style="display: none;" id="fileInput" />
                 <label for="fileInput" class="upload-label btn btn-outline-primary">
                     <i class="fa fa-upload"></i> Browse
@@ -27,15 +27,16 @@
 
 @section scripts {
     <script>
-        // Trigger file input click when label is clicked
-        document.querySelector('.upload-label').addEventListener('click', function () {
-            document.getElementById('fileInput').click();
-        });
-
-        // Show file name when a file is selected
         document.getElementById('fileInput').addEventListener('change', function () {
             var fileName = this.files[0].name;
             alert('Selected file: ' + fileName);
+
+            // Manually submit the form
+            document.getElementById('uploadForm').submit();
         });
     </script>
 }
+
+
+
+

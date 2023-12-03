@@ -12,19 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-d3n4q0ofc8TzLpDIhG8sznhBwIJeNEFvhhQOp8YfL8eMh6f1kMzZL7iW9MKZQj3" crossorigin="anonymous">
    
 </head>
-<div class="top-back-nav">
-    <a asp-area="" asp-controller="Home" asp-action="Print" style="text-decoration: none; color: black">
-        <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"> </i>
-    </a>
-    Print preview
-</div>
+
 <div class=" container-content">
 
     <div class="container-text-content">
         <p class="allow-type">Choose a file to upload: (Accept type: PDF, Word, JPG/JPEG, TIFF, AI)</p>
         <div class="document-name">
-            <p>
-                CSS for idiots.pdf
+            <p id="uploadedFileName">
+                <!-- Display the uploaded file name here -->
+                @ViewBag.UploadedFileName
             </p>
         </div>
     </div>
@@ -38,15 +34,15 @@
                     Chooose a printer
                 </button>
                 <ul class="dropdown-menu choose-btn p-0" aria-labelledby="btnGroupDrop1">
-                    <li><p class="dropdown-item m-0" >Floor 5 H2</p></li>
-                    <li><p class="dropdown-item m-0" >Canteen H3</p></li>
-                    <li><p class="dropdown-item m-0" >WC H6</p></li>
-                    <li><p class="dropdown-item m-0" >Parking lot</p></li>
+                    <li><p class="dropdown-item m-0">Floor 5 H2</p></li>
+                    <li><p class="dropdown-item m-0">Canteen H3</p></li>
+                    <li><p class="dropdown-item m-0">WC H6</p></li>
+                    <li><p class="dropdown-item m-0">Parking lot</p></li>
                 </ul>
             </div>
             <form>
                 <label class="printed-pages" for="Ppages">Printing pages</label><br>
-                <input type="text" id="blank-printing-pages"class="default-in-input" name="Ppages" placeholder="Write in format x-y, if empty then print all pages"><br>
+                <input type="text" id="blank-printing-pages" class="default-in-input" name="Ppages" placeholder="Write in format x-y, if empty then print all pages"><br>
             </form>
             <div class="btn-group paper-group" role="group">
                 <button id="paper-btn" type="button" class="btn btn-primary dropdown-toggle choose-btn" data-bs-toggle="dropdown" aria-expanded="false">
@@ -116,18 +112,19 @@
         </div>
     </div>
 </div>
+
 <script>
     //set default for property
-    let temp="";
+    let temp = "";
     localStorage.setItem("printer", temp);
     localStorage.setItem("format", temp);
     localStorage.setItem("paper", temp);
-    localStorage.setItem("color", temp);    
+    localStorage.setItem("color", temp);
     temp = "print all pages";
     localStorage.setItem("printingPage", temp);
-    temp=1;
+    temp = 1;
     localStorage.setItem("numOfCopies", temp);
-    console.log("printingPages: ",localStorage.getItem("printingPage"));
+    console.log("printingPages: ", localStorage.getItem("printingPage"));
 
     const printer = document.getElementById("printer-btn");
     const color = document.getElementById("color-btn");
@@ -137,14 +134,18 @@
     let subFormats = document.querySelectorAll(".format-group .dropdown-item");
     let subColors = document.querySelectorAll(".color-group .dropdown-item");
     let subPapers = document.querySelectorAll(".paper-group .dropdown-item");
-    function getInfoPrint(){
+
+    function getInfoPrint() {
         let printingPage = document.getElementById("blank-printing-pages").value;
         let numOfCopies = document.getElementById("blank-copies").value;
-        if (printingPage.length>0)
-        {localStorage.setItem("printingPage", document.getElementById("blank-printing-pages").value);}
-        if (numOfCopies.length>0)
-        {localStorage.setItem("numOfCopies", document.getElementById("blank-copies").value);}
+        if (printingPage.length > 0) {
+            localStorage.setItem("printingPage", document.getElementById("blank-printing-pages").value);
+        }
+        if (numOfCopies.length > 0) {
+            localStorage.setItem("numOfCopies", document.getElementById("blank-copies").value);
+        }
     }
+
     for (let i = 0; i < subPrinters.length; i++) {
         subPrinters[i].addEventListener("click", function () {
             printer.innerText = subPrinters[i].innerHTML;
@@ -159,11 +160,11 @@
         })
     }
 
-    
     console.log(localStorage.getItem('printer'));
+
     for (let i = 0; i < subPapers.length; i++) {
         subPapers[i].addEventListener("click", function () {
-           paper.innerText = subPapers[i].innerHTML;
+            paper.innerText = subPapers[i].innerHTML;
             localStorage.setItem("paper", paper.innerText);
         })
     }

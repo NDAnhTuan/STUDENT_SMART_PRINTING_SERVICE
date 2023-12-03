@@ -18,8 +18,13 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    /*name: "Login - SMART_PRINTER_SERVICE",
+    pattern: "{controller=SPSOHome}/{action=ManagePrinter}/{id?}");*/
+    //name: "login",
+    //pattern: "LoginTo",
+    //defaults: new { controller = "Login", action = "LoginTo" });
+    name: "Login - SMART_PRINTER_SERVICE",
+    pattern: "{controller=Login}/{action=LoginAs}/{id?}");
 
 app.MapControllerRoute(
     name: "fileupload",
