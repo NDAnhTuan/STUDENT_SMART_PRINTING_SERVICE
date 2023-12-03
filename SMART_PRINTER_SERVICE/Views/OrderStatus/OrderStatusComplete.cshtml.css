@@ -29,29 +29,16 @@
 }
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: violet;
+    /*background-color: violet;*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* Style the links inside the navigation bar */
-.link-active {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    color: #6750A4;
-    text-align: center;
-    padding: 5px 50px;
-    position: relative;
-    height: 40px;
-    border-bottom: rgb(225, 224, 224) 0.1px solid;
-    padding: 15px 50px 0px 50px;
-    background: #FEF7FF;
-}
+
 
 .shape {
-    position: absolute;
+    /*position: absolute;*/
     height: 3px;
     left: 40%;
     right: 40%;
@@ -68,7 +55,7 @@
 .link:hover {
     background-color: rgb(206, 203, 203);
 }
-
+.link-active,
 .link {
     font-weight: 600;
     color: #49454F;
