@@ -1,3 +1,130 @@
-@{
+﻿@{
     Layout = "_LayoutSPSO";
 }
+<div class="top-back-nav">
+    <a asp-area="" asp-controller="SPSOHome" asp-action="ManagePrinter" style="text-decoration: none; color: black">
+        <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"> </i>
+    </a>
+    View Orders
+</div>
+<div class="container-content">
+    <div class="order-box">
+        <div class="order-info-group">
+            <p class="order-title">
+                How to sleep with deadlines waiting
+            </p>
+            <p class="order-price">
+                3.000 VND
+            </p>
+        </div>
+        <div class="order-status-group">
+            <form action="">
+                <div class="waiting-group">
+                    <input type="radio" id="waiting-status" name="selector">
+                    <label for="waiting-status"> Waiting</label><br>
+
+                </div>
+                <div class="finish-group">
+                    <input type="radio" id="finished-status" name="selector">
+                    <label for="finished-status"> Finished</label><br>
+
+                </div>
+                <div class="taken-group">
+                    <input type="radio" id="taken-status" name="selector">
+                    <label for="taken-status">Taken</label><br>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="order-box">
+        <div class="order-info-group">
+            <p class="order-title">
+                Đồ án tốt nghiệp 2030
+            </p>
+            <p class="order-price">
+                4.000 VND
+            </p>
+        </div>
+        <div class="order-status-group">
+            <form action="">
+                <div class="waiting-group">
+                    <input type="radio" id="waiting-status" name="selector">
+                    <label for="waiting-status"> Waiting</label><br>
+
+                </div>
+                <div class="finish-group">
+                    <input type="radio" id="finished-status" name="selector">
+                    <label for="finished-status"> Finished</label><br>
+
+                </div>
+                <div class="taken-group">
+                    <input type="radio" id="taken-status" name="selector">
+                    <label for="taken-status">Taken</label><br>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="order-box">
+        <div class="order-info-group">
+            <p class="order-title">
+                Learn DSA in 5 minutes before test
+            </p>
+            <p class="order-price">
+                10.000 VND
+            </p>
+        </div>
+        <div class="order-status-group">
+            <form action="">
+                <div class="waiting-group">
+                    <input type="radio" id="waiting-status" name="selector">
+                    <label for="waiting-status"> Waiting</label><br>
+
+                </div>
+                <div class="finish-group">
+                    <input type="radio" id="finished-status" name="selector">
+                    <label for="finished-status"> Finished</label><br>
+
+                </div>
+                <div class="taken-group">
+                    <input type="radio" id="taken-status" name="selector">
+                    <label for="taken-status">Taken</label><br>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class=" cart-group">
+        <div class="cart-img">
+            <img src="../Images/cart.svg" />
+        </div>
+        <div class="count-order-group">
+            <p> Total Orders</p>
+            <p id="total-orders">...</p>
+        </div>
+    </div>
+    <div class="row gx-2 btn-bottom-group m-1">
+        <div class="col">
+            <a href="#" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
+        font-weight: 500;">
+                <div class="btn-bottom  confirm-btn">
+                    Update
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a asp-area="" asp-controller="SPSOHome" asp-action="ManagePrinter" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
+        font-weight: 500;">
+
+                <div class="btn-bottom cancle-btn" >
+                    Cancle
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    let x = document.querySelectorAll('.order-box');
+    document.getElementById("total-orders").innerHTML = x.length;
+</script>
