@@ -10,7 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-d3n4q0ofc8TzLpDIhG8sznhBwIJeNEFvhhQOp8YfL8eMh6f1kMzZL7iW9MKZQj3" crossorigin="anonymous">
-   
+    <script>
+        function validatePageNumber() {
+            var pageNumberInput = document.getElementById("blank-printing-pages").value;
+            var pages = pageNumberInput.split("-");
+            var totalPageCount = parseInt(document.getElementById("totalPageCount").value);
+
+            if (pages.length === 2) {
+                var startPage = parseInt(pages[0]);
+                var endPage = parseInt(pages[1]);
+
+                if (!isNaN(startPage) && !isNaN(endPage) && startPage <= endPage && endPage <= totalPageCount) {
+                    return true;
+                }
+            }
+
+            alert("Invalid page number range. Please enter a valid range.");
+            return false;
+        }
+    </script>
 </head>
 
 <div class=" container-content">
@@ -93,18 +111,24 @@
                 </div>
 
                 <div class="col">
-                    <a onclick="getInfoPrint()" asp-area="" asp-controller="Print" asp-action="confirmPrint" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
-        font-weight: 500;">
-                        <div class="btn-bottom confirm-btn">
-                            Quick printing
+                    <!-- Add the hidden input field to store total number of pages -->
+                    <input type="hidden" id="totalPageCount" value="5"> <!-- Update this value with the actual total number of pages -->
+                    <!-- Modify your Confirm Print buttons to call the validation function -->
+                    <a asp-controller="Print" asp-action="confirmPrint" asp-route-uploadedFileName="@ViewBag.UploadedFileName"
+                       onclick="return validatePageNumber()"
+                       style="text-decoration-line: none; text-align: center; font-size: 13px; line-height: 28px; font-family: Roboto; font-weight: 500;">
+                        <div class="btn-bottom confirm-btn ">
+                            Normal printing
                         </div>
                     </a>
                 </div>
                 <div class="col">
-                    <a onclick="getInfoPrint()" asp-controller="Print" asp-action="confirmPrint" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
-        font-weight: 500;">
+                    <!-- Similar modification for the Quick Print button -->
+                    <a asp-controller="Print" asp-action="confirmPrint" asp-route-uploadedFileName="@ViewBag.UploadedFileName"
+                       onclick="return validatePageNumber()"
+                       style="text-decoration-line: none; text-align: center; font-size: 13px; line-height: 28px; font-family: Roboto; font-weight: 500;">
                         <div class="btn-bottom confirm-btn ">
-                            Normal printing
+                            Quick printing
                         </div>
                     </a>
                 </div>

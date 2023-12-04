@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PdfSharp.Pdf.IO;
+using PdfSharp.Pdf;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -15,6 +17,42 @@ namespace SMART_PRINTER_SERVICE.Controllers
         {
             _logger = logger;
         }
+
+        private string GetFilePath(string fileName)
+        {
+            // Implement your logic to get the file path based on the file name
+            // Make sure to replace this with your actual logic
+            return Path.Combine("wwwroot", "Uploads", fileName);
+        }
+
+        public async Task<int> GetTotalPagesAsync(string filePath)
+        {
+            try
+            {
+                int pageCount = await Task.Run(() =>
+                {
+                    using (PdfDocument document = PdfReader.Open(filePath, PdfDocumentOpenMode.ReadOnly))
+                    {
+                        return document.PageCount;
+                    }
+                });
+
+                return pageCount;
+            }
+            catch (PdfReaderException ex)
+            {
+                // Log and handle PdfReaderException
+                _logger.LogError(ex, $"PdfReaderException: {ex.Message}");
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                // Log and handle other exceptions
+                _logger.LogError(ex, $"Exception: {ex.Message}");
+                return -1;
+            }
+        }
+
 
         [HttpPost]
         [Route("UploadFile")]
@@ -58,5 +96,25 @@ namespace SMART_PRINTER_SERVICE.Controllers
 
             return BadRequest("File not uploaded");
         }
+
+        [HttpGet]
+        [Route("GetTotalPages")]
+        public async Task<IActionResult> GetTotalPagesAction(string fileName)
+        {
+            try
+            {
+                string filePath = GetFilePath(fileName);
+                // Assuming you have a method to get the total pages based on the file name
+                int totalPages = await GetTotalPagesAsync(filePath);
+
+                return Ok(new { TotalPages = totalPages });
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception, e.g., log it or return an error response
+                return BadRequest(new { Message = "Error getting total pages", Error = ex.Message });
+            }
+        }
+
     }
 }
