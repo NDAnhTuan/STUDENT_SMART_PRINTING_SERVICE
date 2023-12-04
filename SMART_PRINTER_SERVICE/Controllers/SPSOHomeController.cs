@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SMART_PRINTER_SERVICE.Models;
 using System.Diagnostics;
-using System.Web.Mvc;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -10,7 +9,7 @@ using Microsoft.AspNetCore.Authorization.Infrastructure;
 
 namespace SMART_PRINTER_SERVICE.Controllers
 {
-    [Microsoft.AspNetCore.Authorization.Authorize(Roles = "spso")]
+    [Authorize(Roles = "spso")]
     public class SPSOHomeController : Controller
     {
         private readonly ILogger<SPSOHomeController> _logger;
@@ -19,11 +18,6 @@ namespace SMART_PRINTER_SERVICE.Controllers
         {
             _logger = logger;
         }
-
-        public IActionResult ManagePrinter()
-        {
-            return View();
-        }
         public async Task<IActionResult> LogOut()
         {
             // Perform sign-out
@@ -31,6 +25,10 @@ namespace SMART_PRINTER_SERVICE.Controllers
 
             // Redirect to the login page
             return RedirectToAction("LoginTo", "Login");
+        }
+        public IActionResult ManagePrinter()
+        {
+            return View();
         }
 
         public IActionResult ManagePrinting()

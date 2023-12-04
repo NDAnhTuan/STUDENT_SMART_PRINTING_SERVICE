@@ -9,10 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(option =>{
-    option.LoginPath = "/Login/LoginTo";
-    option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-});
+    .AddCookie(option => {
+        option.LoginPath = "/Login/LoginTo";
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+    });
 builder.Services.AddDbContext<databaseSEContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("SMART_PRINTER_SERVICEContext")
     ));

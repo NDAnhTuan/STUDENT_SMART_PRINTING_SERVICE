@@ -10,11 +10,11 @@ namespace SMART_PRINTER_SERVICE.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly databaseSEContext _db;
+        private readonly databaseSEContext _database;
 
-        public LoginController(databaseSEContext db)
+        public LoginController(databaseSEContext database)
         {
-            _db = db;
+            _database = database;
         }
         public IActionResult LoginTo()
         {
@@ -26,7 +26,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
         [HttpPost]
         public async Task<IActionResult> LoginTo(UserAccount model)
         {
-            var user = _db.UserAccounts.FirstOrDefault(u => u.Username == model.Username && u.Password == model.Password);
+            var user = _database.UserAccounts.FirstOrDefault(u => u.Username == model.Username && u.Password == model.Password);
 
             if (user != null)
             {
@@ -36,11 +36,11 @@ namespace SMART_PRINTER_SERVICE.Controllers
                 Console.WriteLine($"User Role: {role}");
 
                 List<Claim> claims = new List<Claim>()
-        {
-            new Claim(ClaimTypes.NameIdentifier, model.Username),
-            new Claim("OtherProperties", "Example Role"),
-            new Claim(ClaimTypes.Role, role)
-        };
+                {
+                    new Claim(ClaimTypes.NameIdentifier, model.Username),
+                    new Claim("OtherProperties", "Example Role"),
+                    new Claim(ClaimTypes.Role, role)
+                };
 
                 ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
@@ -65,6 +65,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
             ViewData["ValidateMessage"] = "user not found";
             return View();
         }
+
         public IActionResult LoginAs()
         {
             return View();

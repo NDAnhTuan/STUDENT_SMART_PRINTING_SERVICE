@@ -88,9 +88,9 @@
                 <p>Do you want to Logout?</p>
             </div>
             <div class="modal-footer">
-                <div class="btn btn-secondary" onclick = "closeModalLogout()" >Cancel</div>
+                <div class="btn btn-secondary" onclick="closeModalLogout()">Cancel</div>
                 <a class="btn btn-primary bg-danger" asp-controller="SPSOHome" asp-action="LogOut">Logout</a>
-                
+
             </div>
         </div>
     </div>
@@ -152,7 +152,7 @@
         function closeModalLogout() {
             document.querySelector('.modal-logout').classList.remove('open');
         }
-        
+
 
     </script>
     @await RenderSectionAsync("Scripts", required: false)
