@@ -4,11 +4,15 @@ using PdfSharp.Pdf.IO;
 using PdfSharp.Pdf;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 
 namespace SMART_PRINTER_SERVICE.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class FileUploadController : ControllerBase
     {
         private readonly ILogger<FileUploadController> _logger;

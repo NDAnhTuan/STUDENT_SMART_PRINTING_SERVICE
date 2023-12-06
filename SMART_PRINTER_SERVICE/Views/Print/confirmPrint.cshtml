@@ -8,6 +8,10 @@
         <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i> Print
     </button>
 </div>*@
+@{
+    var fullnameClaim = Context.User?.FindFirst("Fullname");
+    var fullname = fullnameClaim?.Value;
+}
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +34,7 @@
             <img src="~/Images/avtIcon.svg" />
         </div>
         <div class="user-text-info">
-            <h3>Welcome Nguyen Van A</h3>
+            <h3>Xin chào, @fullname!</h3>
             <p>uploaded a document</p>
         </div>
     </div>
@@ -80,7 +84,7 @@
         <div class="col">
             <a asp-area="" asp-controller="Home" asp-action="Print" style="text-decoration-line: none;  text-align: center; font-size: 13px; line-height: 28px;   font-family: Roboto;
         font-weight: 500;">
-                <div class="btn-bottom confirm-btn" onclick="submit()">
+                <div class="btn-bottom confirm-btn" onclick="submitOrder()">
                     Confirm
                 </div>
             </a>
@@ -119,6 +123,35 @@
         } catch (error) {
             console.error('Error fetching total pages:', error);
             return -1; // Default value in case of an error
+        }
+    }
+
+    async function submitOrder() {
+        let orderData = {
+            paper: localStorage.getItem('paper'),
+            color: localStorage.getItem('color'),
+            format: localStorage.getItem('format'),
+            printer: localStorage.getItem('printer'),
+            printingPage: localStorage.getItem('printingPage'),
+            numOfCopies: localStorage.getItem('numOfCopies'),
+        };
+
+        try {
+            let response = await fetch('/api/Order/SubmitOrder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(orderData),
+            });
+
+            if (response.ok) {
+                console.log('Order submitted successfully!');
+            } else {
+                console.error('Error submitting order:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error submitting order:', error);
         }
     }
 </script>

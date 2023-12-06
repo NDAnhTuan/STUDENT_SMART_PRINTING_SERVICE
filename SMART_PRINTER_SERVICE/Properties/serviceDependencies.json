@@ -5,8 +5,7 @@
     },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:SMART_PRINTER_SERVICEContext",
-      "dynamicId": null
+      "connectionId": "ConnectionStrings:SMART_PRINTER_SERVICEContext"
     }
   }
 }

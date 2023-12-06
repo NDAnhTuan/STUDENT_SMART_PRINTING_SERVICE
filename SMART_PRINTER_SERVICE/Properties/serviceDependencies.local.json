@@ -6,9 +6,9 @@
     "mssql1": {
       "serviceConnectorResourceId": "",
       "secretStore": "LocalSecretsFile",
+      "resourceId": null,
       "type": "mssql.local",
-      "connectionId": "ConnectionStrings:SMART_PRINTER_SERVICEContext",
-      "dynamicId": null
+      "connectionId": "ConnectionStrings:SMART_PRINTER_SERVICEContext"
     }
   }
 }

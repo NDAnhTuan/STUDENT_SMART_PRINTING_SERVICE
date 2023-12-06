@@ -2,9 +2,13 @@
 using Microsoft.Extensions.Logging;
 using SMART_PRINTER_SERVICE.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 
 namespace SMART_PRINTER_SERVICE.Controllers
 {
+    [Authorize]
     public class PrintController : Controller
     {
         private readonly ILogger<PrintController> _logger;

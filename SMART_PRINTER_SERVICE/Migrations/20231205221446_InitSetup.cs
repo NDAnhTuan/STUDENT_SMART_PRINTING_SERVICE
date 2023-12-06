@@ -23,18 +23,18 @@ namespace SMART_PRINTER_SERVICE.Migrations
             //    {
             //        table.PrimaryKey("PK_Printers", x => x.PrinterId);
             //    });
-            migrationBuilder.InsertData(
-                table: "Printers",
-                columns: new[] { "PrinterId", "PrinterName", "PrinterLocation", "Facility", "Status" },
-                values: new object[,]
-                {
-                    { "Printer01", "Floor 5 H2", "Floor 5 H2", "CS2", "Active" },
-                    { "Printer02", "Canteen H3", "Canteen H3", "CS2", "Active" },
-                    { "Printer03", "WC H6", "WC H6", "CS2", "Active" },
-                    { "Printer04", "Parking lot", "Parking lot behind", "CS2", "Active" },
-                    { "Printer05", "Underground H6", "Undergroung H6", "CS2", "Active" },
-                    { "Printer06", "Roof H1", "Floor 6 H1", "CS2", "Inactive" },
-                });
+            //migrationBuilder.InsertData(
+            //    table: "Printers",
+            //    columns: new[] { "PrinterId", "PrinterName", "PrinterLocation", "Facility", "Status" },
+            //    values: new object[,]
+            //    {
+            //        { "Printer01", "Floor 5 H2", "Floor 5 H2", "CS2", "Active" },
+            //        { "Printer02", "Canteen H3", "Canteen H3", "CS2", "Active" },
+            //        { "Printer03", "WC H6", "WC H6", "CS2", "Active" },
+            //        { "Printer04", "Parking lot", "Parking lot behind", "CS2", "Active" },
+            //        { "Printer05", "Underground H6", "Undergroung H6", "CS2", "Active" },
+            //        { "Printer06", "Roof H1", "Floor 6 H1", "CS2", "Inactive" },
+            //    });
 
             //migrationBuilder.CreateTable(
             //    name: "UserAccounts",
@@ -53,22 +53,22 @@ namespace SMART_PRINTER_SERVICE.Migrations
             //    {
             //        table.PrimaryKey("PK_UserAccounts", x => x.Username);
             //    });
-            migrationBuilder.InsertData(
-                table: "UserAccounts",
-                columns: new[] { "Username", "Password", "Fullname", "Email", "PagePrint", "Falcuty", "Major", "Role" },
-                values: new object[,]
-                {
-                    { "tiendungk21", "babychickens", "Ta Nguyen Tien Dung", "dung@gmail.com", 100, "KH KTMT", "KHMT", "student" },
-                    { "thanhhaik21", "babychickens", "Phan Thanh Hai", "hai@gmail.com", 100, "KH KTMT", "KHMT", "student" },
-                    { "minhdiemk21", "babychickens", "Nguyen Minh Diem", "diem@gmail.com", 100, "KH KTMT", "KHMT", "student" },
-                    { "duycuongk21", "babychickens", "Doan Nguyen Duy Cuong", "cuong@gmail.com", 100, "KH KTMT", "KHMT", "student" },
-                    { "doanhoangk21", "babychickens", "Nguyen Doan Hoang", "hoang@gmail.com", 100, "KH KTMT", "KHMT", "student" },
-                    { "anhtuank21", "babychickens", "Nguyen Duc Anh Tuan", "tuan@gmail.com", 100, "KH KTMT", "KHMT", "student" },
-                    { "tatlinhk21", "babychickens", "Nguyen Tat Linh", "linh@gmail.com", 100, "KH KTMT", "KHMT", "student" },
-                    { "manager1", "managers", "Nguyen Duc Anh", "anh@gmail.com", 100, null, null, "spso" },
-                    { "manager2", "managers", "Nguyen Anh Duc", "duc@gmail.com", 100, null, null, "spso" },
-                    { "manager3", "managers", "Nguyen Hai Duong", "duong@gmail.com", 100, null, null, "spso" },
-                });
+            //migrationBuilder.InsertData(
+            //    table: "UserAccounts",
+            //    columns: new[] { "Username", "Password", "Fullname", "Email", "PagePrint", "Falcuty", "Major", "Role" },
+            //    values: new object[,]
+            //    {
+            //        { "tiendungk21", "babychickens", "Ta Nguyen Tien Dung", "dung@gmail.com", 100, "KH KTMT", "KHMT", "student" },
+            //        { "thanhhaik21", "babychickens", "Phan Thanh Hai", "hai@gmail.com", 100, "KH KTMT", "KHMT", "student" },
+            //        { "minhdiemk21", "babychickens", "Nguyen Minh Diem", "diem@gmail.com", 100, "KH KTMT", "KHMT", "student" },
+            //        { "duycuongk21", "babychickens", "Doan Nguyen Duy Cuong", "cuong@gmail.com", 100, "KH KTMT", "KHMT", "student" },
+            //        { "doanhoangk21", "babychickens", "Nguyen Doan Hoang", "hoang@gmail.com", 100, "KH KTMT", "KHMT", "student" },
+            //        { "anhtuank21", "babychickens", "Nguyen Duc Anh Tuan", "tuan@gmail.com", 100, "KH KTMT", "KHMT", "student" },
+            //        { "tatlinhk21", "babychickens", "Nguyen Tat Linh", "linh@gmail.com", 100, "KH KTMT", "KHMT", "student" },
+            //        { "manager1", "managers", "Nguyen Duc Anh", "anh@gmail.com", 100, null, null, "spso" },
+            //        { "manager2", "managers", "Nguyen Anh Duc", "duc@gmail.com", 100, null, null, "spso" },
+            //        { "manager3", "managers", "Nguyen Hai Duong", "duong@gmail.com", 100, null, null, "spso" },
+            //    });
 
             //migrationBuilder.CreateTable(
             //    name: "Orders",
@@ -99,13 +99,19 @@ namespace SMART_PRINTER_SERVICE.Migrations
             //            principalColumn: "Username",
             //            onDelete: ReferentialAction.Cascade);
             //    });
-            //migrationBuilder.InsertData(
-            //    table: "Orders",
-            //    columns: new[] { "OrderId", "Choice", "Copies", "Filename", "Sizepage", "Colorfile", "Numside", "Status", "Numpage", "TimeOrder", "DayOrder", "UsernameOrder", "PrinterOrder", "UsernameOrderNavigationUsername" },
-            //    values: new object[,]
-            //    {
-
-            //    });
+            migrationBuilder.InsertData(
+                table: "Orders",
+                columns: new[] { "OrderId", "Choice", "Copies", "Filename", "Sizepage", "Colorfile", "Numside", "Status", "Numpage", "TimeOrder", "DayOrder", "UsernameOrder", "PrinterOrder", "UsernameOrderNavigationUsername" },
+                values: new object[,]
+                {
+                     { "Order01", "Quick", 2, "LearningSE.pdf", "A4", "Color", 2, "waiting", 10, "10:30 AM", "2023-10-15", "tiendungk21", "Printer01", "tiendungk21" },
+                     { "Order02", "Normal", 1, "LearningDSA.pdf", "A4", "Color", 2, "Finished", 12, "10:10 AM", "2023-12-15", "minhdiemk21", "Printer02", "minhdiemk21" },
+                     { "Order03", "Quick", 2, "LearningDB.pdf", "A4", "Color", 2, "Taken", 14, "11:30 AM", "2023-11-15", "tiendungk21", "Printer03", "tiendungk21" },
+                     { "Order04", "Quick", 2, "SleepingInNervous.pdf", "A4", "Color", 2, "waiting", 10, "10:30 AM", "2023-10-15", "tiendungk21", "Printer01", "tiendungk21" },
+                     { "Order05", "Normal", 1, "PracitceCodeProMaster.pdf", "A4", "Color", 2, "Finished", 12, "10:10 AM", "2023-12-15", "minhdiemk21", "Printer02", "minhdiemk21" },
+                     { "Order06", "Normal", 1, "LearningDSAforTest5minute.pdf", "A4", "Color", 2, "Finished", 12, "10:10 AM", "2023-12-15", "minhdiemk21", "Printer02", "minhdiemk21" },
+                     { "Order07", "Quick", 2, "LearningDBinOneNight.pdf", "A4", "Color", 2, "Finished", 14, "11:30 AM", "2023-11-15", "tiendungk21", "Printer03", "tiendungk21" }
+                }); ; ;
 
             //migrationBuilder.CreateTable(
             //    name: "PrinterUserAccount",
@@ -130,18 +136,18 @@ namespace SMART_PRINTER_SERVICE.Migrations
             //            principalColumn: "Username",
             //            onDelete: ReferentialAction.Cascade);
             //    });
-            migrationBuilder.InsertData(
-                table: "PrinterUserAccount",
-                columns: new[] { "PrinterIdmanagedsPrinterId", "UsernameManagersUsername" },
-                values: new object[,]
-                {
-                    { "Printer01", "manager1" },
-                    { "Printer02", "manager3" },
-                    { "Printer03", "manager2" },
-                    { "Printer04", "manager2" },
-                    { "Printer05", "manager3" },
-                    { "Printer06", "manager1" },
-                });
+            //migrationBuilder.InsertData(
+            //    table: "PrinterUserAccount",
+            //    columns: new[] { "PrinterIdmanagedsPrinterId", "UsernameManagersUsername" },
+            //    values: new object[,]
+            //    {
+            //        { "Printer01", "manager1" },
+            //        { "Printer02", "manager3" },
+            //        { "Printer03", "manager2" },
+            //        { "Printer04", "manager2" },
+            //        { "Printer05", "manager3" },
+            //        { "Printer06", "manager1" },
+            //    });
 
             //migrationBuilder.CreateIndex(
             //    name: "IX_Orders_UsernameOrderNavigationUsername",

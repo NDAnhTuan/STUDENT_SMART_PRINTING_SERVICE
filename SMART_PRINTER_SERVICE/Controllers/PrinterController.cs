@@ -36,7 +36,6 @@ namespace SMART_PRINTER_SERVICE.Controllers
         //}
         public ActionResult Search()
         {
-            // Lấy danh sách tất cả máy in từ cơ sở dữ liệu
             var printers = _dbContext.Printers.ToList();
 
             // Trả về view "ManagePrinter" với danh sách máy in
