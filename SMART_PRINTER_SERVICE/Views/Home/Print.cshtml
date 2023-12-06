@@ -1,25 +1,37 @@
 ﻿@{
     ViewData["Title"] = "UploadPage";
 }
-@*<h1>@ViewData["Title"]</h1>*@
 
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="top-back-nav">
+                <a asp-area="" asp-controller="Home" asp-action="Index" style="text-decoration: none; color: black">
+                    <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i>
+                </a>
+                Upload
+            </div>
 
-@*<div style="background-color: white; height: 35px; align-items:center; position: relative; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);">
-    <button class="recharge-button" style="border: none; background-color: transparent; margin-top: 10px;">
-        <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i> Print
-    </button>
-</div>*@
-<div class="top-back-nav">
-    <a asp-area="" asp-controller="Home" asp-action="Index" style="text-decoration: none; color: black">
-        <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"> </i>
-    </a>
-    Print
+            <h5 class="mt-4">Choose a file to upload: (Accepted types: PDF, Word, JPG/JPEG, TIFF, AI)</h5>
+
+            <form method="post" enctype="multipart/form-data" asp-action="UploadFile" asp-controller="FileUpload" id="uploadForm">
+                <input type="file" name="file" style="display: none;" id="fileInput" />
+                <label for="fileInput" class="upload-label btn btn-outline-primary">
+                    <i class="fa fa-upload"></i> Browse
+                </label>
+                <input type="submit" value="Upload" style="display: none;" />
+            </form>
+        </div>
+    </div>
 </div>
-<h5 style="font-size:24px; font-weight: 600; padding: 30px;">
-    Choose a file to upload: (Accepted type: PDF, Word, JPG/JPEG, TIFF, AI)
-</h5>
- <a class="nav-link text-dark  text-md-center btn-link" asp-area="" asp-controller="Print" asp-action="PrintPreview">
-    <img src="../Images/UploadIcon.png" style="align-items: center; justify-content:center; width: 30%; height: auto"/>
-    <h3 style="color: #808080">Browser</h3>
-</a>
-                        
+
+@section scripts {
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function () {
+            var fileName = this.files[0].name;
+            alert('Selected file: ' + fileName);
+            // Manually submit the form
+            document.getElementById('uploadForm').submit();
+        });
+    </script>
+}

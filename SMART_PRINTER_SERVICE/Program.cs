@@ -41,4 +41,9 @@ app.MapControllerRoute(
 //name: "login",
 //pattern: "LoginTo",
 //defaults: new { controller = "Login", action = "LoginTo" });
+app.MapControllerRoute(
+    name: "fileupload",
+    pattern: "UploadFile",
+    defaults: new { controller = "FileUpload", action = "UploadFile" });
+
 app.Run();

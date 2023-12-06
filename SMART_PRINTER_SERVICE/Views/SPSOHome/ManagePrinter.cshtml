@@ -1,25 +1,33 @@
 @{
     Layout = "_LayoutSPSO";
 }
-<div class="container-ManagePrinter">
-    <div class="ManagePrinter-addPrinter text-center border">
-        <div class="addPrinter-title font-weight-bold"><h1>Add a Printer</h1></div>
-        <div class="btn btn-primary mb-2" style="padding-left: 10px" onclick="showModalAddPrinter()">Add</div>
-    </div>
-    <div class="ManagePrinter-addPrinter text-center border">
-        <div class="addPrinter-title font-weight-bold">
-            <input type="text" class="search-input" placeholder="Find a printer">
-            <i class="ti-search"></i>
-        </div>
-        <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px" onclick="">Search</button>
-    </div>
-    <div class="ManagePrinter-table text-center">
-        <ul class="ManagePrinter-table-select row h-40">
-            <li class=" col table-select-click">Enable</li>
-            <li class=" col">Disable</li>
-        </ul>
+@model List<Printer>
+
+<div class="ManagePrinter-addPrinter text-center border">
+    <div class="addPrinter-title font-weight-bold">
+        <form asp-controller="Printer" asp-action="Search" method="post">
+            <input type="text" class="search-input" name="searchTerm" placeholder="Find a printer">
+            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px">Search</button>
+        </form>
     </div>
 </div>
+
+<!-- Display search results -->
+<div>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var printer in Model)
+        {
+            <p>@printer.PrinterName</p>
+            <!-- Display other properties as needed -->
+        }
+    }
+    else
+    {
+        <p>No results found.</p>
+    }
+</div>
+
 
 @* ======= Model add printer ======== *@
 <div class="modal-add-printer js-modal">
