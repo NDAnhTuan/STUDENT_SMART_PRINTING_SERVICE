@@ -37,7 +37,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
         }
         public IActionResult ViewOrder()
         {
-            return View();
+            return RedirectToAction("OrderPrinting","OrderStatus");
         }
         public IActionResult ViewPrintingHistory()
         {

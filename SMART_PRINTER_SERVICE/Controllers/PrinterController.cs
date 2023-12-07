@@ -42,7 +42,6 @@ namespace SMART_PRINTER_SERVICE.Controllers
             return View("ManagePrinter", printers);
         }
 
-        return View("Index", printers);
     }
 }
 

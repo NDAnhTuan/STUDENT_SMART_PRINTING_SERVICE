@@ -27,6 +27,23 @@ namespace SMART_PRINTER_SERVICE.Controllers
             var pendingOrders = _database.Orders.Where(o => o.Status == "waiting").ToList();
             return View("OrderStatusComplete", pendingOrders);
         }
+        public IActionResult OrderPrinting()
+        {
+            var orders = _database.Orders.ToList();
+            return View("~/Views/SPSOHome/ViewOrder.cshtml", orders);
+        }
+        [HttpPost]
+        public IActionResult UpdateOrderStatus(string orderId, string newStatus)
+        {
+            var order = _database.Orders.FirstOrDefault(o => o.OrderId == orderId);
+
+            if (order != null)
+            {
+                order.Status = newStatus;
+                _database.SaveChanges();
+            }
+            return RedirectToAction("HomePage","Home");
+        }
 
         public IActionResult OrderStatusComplete()
         {
