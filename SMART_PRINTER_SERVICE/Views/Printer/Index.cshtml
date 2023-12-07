@@ -1,0 +1,30 @@
+﻿@model List<Printer>
+@{
+    Layout = "_LayoutSPSO";
+}
+
+<div class="ManagePrinter-addPrinter text-center border">
+    <div class="addPrinter-title font-weight-bold">
+        <form asp-controller="Printer" asp-action="Search" method="post">
+            <input type="text" class="search-input" name="searchTerm" placeholder="Find a printer">
+            <button type="submit" class="btn btn-primary mb-2" style="padding-left: 10px">Search</button>
+        </form>
+    </div>
+</div>
+
+<!-- Display search results -->
+<div>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var printer in Model)
+        {
+            <p>@printer.PrinterName</p>
+            <!-- Display other properties as needed -->
+        }
+    }
+    else
+    {
+        <p>No results found.</p>
+    }
+</div>
+

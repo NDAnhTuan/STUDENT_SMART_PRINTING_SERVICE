@@ -12,7 +12,7 @@ using SMART_PRINTER_SERVICE.Data;
 namespace SMART_PRINTER_SERVICE.Migrations
 {
     [DbContext(typeof(databaseSEContext))]
-    [Migration("20231205221446_InitSetup")]
+    [Migration("20231206170926_InitSetup")]
     partial class InitSetup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
