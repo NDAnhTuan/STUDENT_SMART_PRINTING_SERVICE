@@ -1,0 +1,100 @@
+@model List<SMART_PRINTER_SERVICE.Models.Order>
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="grid">
+        <div style="background-color: white; height: 40px; position: relative;">
+            <button class="recharge-button">
+                <i class="fa fa-angle-left" style="font-size:19px; width: 20px;"></i> View printing history
+            </button>
+        </div>
+        <div style="background-color: white; height: 40px;">
+            <div class="div3">
+                Filter by Date
+            </div>
+        </div>
+        <div style="background-color: white; height: 105px;">
+            <div class="grid1">
+                <form>
+                    <fieldset class="fieldset1">
+                        <legend class="legend">From</legend>
+                        10/17/2023
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset class="fieldset1">
+                        <legend class="legend">To</legend>
+                        10/29/2023
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset class="fieldset2">
+                        <legend class="legend">PrinterID</legend>
+                        123abc
+                    </fieldset>
+                </form>
+                <div class="day">
+                    MM/DD/YYYY
+                </div>
+                <div class="day">
+                    MM/DD/YYYY
+                </div>
+            </div>
+        </div>
+        <div style="background-color: white; height: 390px;">
+
+
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var order in Model)
+                {
+                    <div class="flexbox2">
+                        <div class="file-info-grid">
+                            <div class="file-picture">
+                                <img class="profile-picture" src="../Images/file.png">
+                            </div>
+                            <div class="file-info">
+                                <p class="file-name">
+                                    File name: @order.Filename
+                                </p>
+                                <p class="file-price">
+                                    User: @order.UsernameOrder
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid2">
+                            <div class="left">@order.PrinterOrder</div>
+                            <div class="right">Printed on</div>
+                            <div class="left">123abc</div>
+                            <div class="right">@order.DayOrder</div>
+                        </div>
+                    </div>
+                }
+            }
+
+
+            <div class="flexbox2">
+                <div class="file-info-grid">
+                    <div class="file-picture">
+                        <img class="profile-picture" src="../Images/money.png">
+                    </div>
+                    <div class="file-info">
+                        <p class="file-name">
+                            All Order
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: white; height: 100px; margin-top: 40px;">
+            <div class="footer">
+                Total number of A4 pages: 69
+            </div>
+            <div class="footer">
+                Total number of A3 pages: 69
+            </div>
+        </div>
+    </div>
+</body>
+</html>

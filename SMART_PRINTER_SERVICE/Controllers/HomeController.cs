@@ -52,7 +52,8 @@ namespace SMART_PRINTER_SERVICE.Controllers
         }
         public IActionResult History()
         {
-            return View();
+            return RedirectToAction("HistoryPrinting","History");
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

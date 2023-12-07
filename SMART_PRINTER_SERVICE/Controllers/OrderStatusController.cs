@@ -48,7 +48,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
         public IActionResult OrderStatusComplete()
         {
             var completeOrders = _database.Orders
-                .Where(o => o.Status == "Finished" || o.Status == "Taken")
+                .Where(o => o.Status == "Finished")
                 .ToList();
 
             return View("OrderStatusComplete", completeOrders);
