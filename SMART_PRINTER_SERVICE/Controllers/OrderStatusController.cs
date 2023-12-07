@@ -25,7 +25,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
         public IActionResult OrderStatusPending()
         {
             var pendingOrders = _database.Orders.Where(o => o.Status == "waiting").ToList();
-            return View("OrderStatusComplete", pendingOrders);
+            return View("OrderStatusPending", pendingOrders);
         }
         public IActionResult OrderPrinting()
         {
@@ -51,7 +51,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
                 .Where(o => o.Status == "Finished" || o.Status == "Taken")
                 .ToList();
 
-            return View("OrderStatusPending", completeOrders);
+            return View("OrderStatusComplete", completeOrders);
         }
     }
 }

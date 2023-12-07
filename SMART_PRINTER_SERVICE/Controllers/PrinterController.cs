@@ -39,7 +39,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
             var printers = _dbContext.Printers.ToList();
 
             // Trả về view "ManagePrinter" với danh sách máy in
-            return View("ManagePrinter", printers);
+            return View("~/Views/SPSOHome/ManagePrinter", printers);
         }
 
     }
