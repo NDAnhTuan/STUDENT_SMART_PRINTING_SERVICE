@@ -1,7 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@{
+    var fullnameClaim = Context.User?.FindFirst("Fullname");
+    var fullname = fullnameClaim?.Value;
+}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +57,7 @@
         <div class="box2-grid">
             <div class="welcome-grid">
                 <div class="welcome">
-                    Welcome back,Nguyễn Văn A
+                    <p>Xin chào, @fullname!</p>
                 </div>
                 <div class="dog">
                     <img class="doggo" src="../Images/dog.png">

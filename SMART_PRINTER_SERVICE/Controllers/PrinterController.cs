@@ -2,29 +2,45 @@
 using Microsoft.EntityFrameworkCore;
 using SMART_PRINTER_SERVICE.Data;
 using SMART_PRINTER_SERVICE.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 
-public class PrinterController : Controller
+namespace SMART_PRINTER_SERVICE.Controllers
 {
-    private readonly databaseSEContext _dbContext;
-
-    public PrinterController(databaseSEContext dbContext)
+    [Authorize(Roles = "spso")]
+    public class PrinterController : Controller
     {
-        _dbContext = dbContext;
-    }
+        private readonly databaseSEContext _dbContext;
 
-    // Action for displaying the list of printers
-    public ActionResult Index()
-    {
-        var printers = _dbContext.Printers.ToList();
-        return View(printers);
-    }
+        public PrinterController(databaseSEContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
 
-    // Action for handling the search
-    [HttpPost]
-    public ActionResult Search(string searchTerm)
-    {
-        var printers = _dbContext.Printers
-    .Where(p => EF.Functions.Like(p.PrinterName, $"%{searchTerm}%")).ToList();;
+        // Action for displaying the list of printers
+        public ActionResult Index()
+        {
+            var printers = _dbContext.Printers.ToList();
+            return View(printers);
+        }
+
+        // Action for handling the search
+        //public ActionResult Search(string searchTerm)
+        //{
+        //    var printers = _dbContext.Printers
+        //        .Where(p => EF.Functions.Contains(p.PrinterName, searchTerm))
+        //        .ToList();
+
+        //    return View("ManagePrinter", printers);
+        //}
+        public ActionResult Search()
+        {
+            var printers = _dbContext.Printers.ToList();
+
+            // Trả về view "ManagePrinter" với danh sách máy in
+            return View("ManagePrinter", printers);
+        }
 
         return View("Index", printers);
     }

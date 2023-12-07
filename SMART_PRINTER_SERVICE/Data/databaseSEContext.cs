@@ -5,6 +5,10 @@ namespace SMART_PRINTER_SERVICE.Data
 {
     public class databaseSEContext : DbContext
     {
+        public databaseSEContext()
+        {
+        }
+
         public databaseSEContext(DbContextOptions<databaseSEContext> options) : base(options)
         {
 

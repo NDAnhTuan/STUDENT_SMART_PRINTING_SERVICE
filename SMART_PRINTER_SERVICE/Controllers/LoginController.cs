@@ -30,7 +30,7 @@ namespace SMART_PRINTER_SERVICE.Controllers
 
             if (user != null)
             {
-                var role = user.Role; // Assuming the user object has a Role property
+                var role = user.Role;
 
                 // Log the role for debugging
                 Console.WriteLine($"User Role: {role}");
@@ -39,7 +39,8 @@ namespace SMART_PRINTER_SERVICE.Controllers
                 {
                     new Claim(ClaimTypes.NameIdentifier, model.Username),
                     new Claim("OtherProperties", "Example Role"),
-                    new Claim(ClaimTypes.Role, role)
+                    new Claim(ClaimTypes.Role, role),
+                    new Claim("Fullname", user.Fullname),
                 };
 
                 ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

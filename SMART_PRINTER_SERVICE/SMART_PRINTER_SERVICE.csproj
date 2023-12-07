@@ -23,6 +23,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Owin.Host.SystemWeb" Version="4.2.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="PDFsharp" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>

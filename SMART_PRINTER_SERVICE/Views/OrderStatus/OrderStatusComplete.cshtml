@@ -1,3 +1,4 @@
+@model List<SMART_PRINTER_SERVICE.Models.Order>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +24,7 @@
                 </div>
             </div>
      </div>
+
     <div style="background-color: white; height: 38px;">
         <div class="flexbox">
           <div class="history-and-view-available">Recent orders</div>
@@ -33,17 +35,29 @@
           </div>
         </div>
     </div>
-    <div style="background-color: white; height: 85px; padding: 2px; border: rgb(229, 223, 223) 0.1px solid ; border-radius: 7px;">
-    <div style="font-size: 16px; line-height: 20px; font-weight: 500; margin-bottom: 5px;">
-      Learn DSA in 5 minutes before test
-    </div>
-    <div style="font-size: 16px; line-height: 20px; font-weight: 500; margin-bottom: 10px;">
-      10.000 VND
-    </div>
-    <div style="font-size: 16px; line-height: 24px; font-weight: 600;">
-      Finished
-    </div>
-    </div>
+
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var order in Model)
+            {
+                <div style="background-color: white; height: 85px; padding: 2px; border: rgb(229, 223, 223) 0.1px solid ; border-radius: 7px;">
+                    <div style="font-size: 16px; line-height: 20px; font-weight: 500; margin-bottom: 5px;">
+                        Filename: @order.Filename
+                    </div>
+                    <div style="font-size: 16px; line-height: 20px; font-weight: 500; margin-bottom: 10px;">
+                        Copies: @order.Copies
+                    </div>
+                    <div style="font-size: 16px; line-height: 24px; font-weight: 600;">
+                        Status: @order.Status
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No orders available.</p>
+        }
+
     <div style="background-color: white; height: 85px; padding: 2px;">
     </div>
     <div style="background-color: white; height: 100px; margin-top: 10px;">

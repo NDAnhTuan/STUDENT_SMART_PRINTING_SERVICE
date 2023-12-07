@@ -1,22 +1,40 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SMART_PRINTER_SERVICE.Models;
+using SMART_PRINTER_SERVICE.Data;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SMART_PRINTER_SERVICE.Controllers
 {
+    [Authorize]
     public class OrderStatusController : Controller
     {
+        private readonly databaseSEContext _database;
+
+        public OrderStatusController(databaseSEContext database)
+        {
+            _database = database;
+        }
+
         public IActionResult OrderStatus()
         {
-            return View();
+            var allOrders = _database.Orders.ToList();
+            return View("OrderStatus", allOrders);
         }
 
         public IActionResult OrderStatusPending()
         {
-            return View();
+            var pendingOrders = _database.Orders.Where(o => o.Status == "waiting").ToList();
+            return View("OrderStatusComplete", pendingOrders);
         }
 
         public IActionResult OrderStatusComplete()
         {
-            return View();
+            var completeOrders = _database.Orders
+                .Where(o => o.Status == "Finished" || o.Status == "Taken")
+                .ToList();
+
+            return View("OrderStatusPending", completeOrders);
         }
     }
 }
