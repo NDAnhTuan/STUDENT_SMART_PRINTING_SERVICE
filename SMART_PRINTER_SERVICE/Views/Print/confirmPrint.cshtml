@@ -110,8 +110,11 @@
             blance_list[5].innerHTML = parseInt(pages[1]) - parseInt(pages[0]) + 1;
         } else {
             // If printed pages value is empty, set it to the total number of pages in the document
-            let totalPages = await getTotalPages();
-            blance_list[5].innerHTML = totalPages;
+            if (pages[0] === "print all pages") {
+                let totalPages = await getTotalPages();
+                blance_list[5].innerHTML = totalPages;
+            }
+            else blance_list[5].innerHTML = 1;
         }
     }
     async function getTotalPages() {
