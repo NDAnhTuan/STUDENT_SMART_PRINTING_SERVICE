@@ -2,6 +2,37 @@
     ViewData["Title"] = "UploadPage";
 }
 
+<style>
+    .upload-contain{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .upload-contain__icon {
+        margin-top: 100px;
+        width: 200px;
+        height: 150px;
+        color: #808080;
+    }
+
+    .upload-contain:hover .upload-contain__icon {
+        cursor: pointer;
+    }
+
+    .upload-contain__browser-text{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 22px;
+        text-align: center;
+        color: #808080;
+    }
+</style>
+
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-12">
@@ -16,9 +47,14 @@
 
             <form method="post" enctype="multipart/form-data" asp-action="UploadFile" asp-controller="FileUpload" id="uploadForm">
                 <input type="file" name="file" style="display: none;" id="fileInput" />
-                <label for="fileInput" class="upload-label btn btn-outline-primary">
+                @*<label for="fileInput" class="upload-label btn btn-outline-primary">
                     <i class="fa fa-upload"></i> Browse
+                </label>*@
+                <label for="fileInput" class="upload-contain">
+                    <img class="upload-contain__icon" src="../Images/UploadIcon.png" alt="" />
+                    <p class="upload-contain__browser-text">BROWSE</p>
                 </label>
+                
                 <input type="submit" value="Upload" style="display: none;" />
             </form>
         </div>
